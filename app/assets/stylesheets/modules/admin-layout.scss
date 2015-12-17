@@ -1,0 +1,106 @@
+.admin-destock-nav { 
+  display: none;
+  @include firefox_breakpoint(md_portrait){ 
+    display: block;
+    float:left;
+    width: 85px;
+    height: 100vh; 
+    background-color: #74AFAD;
+    color: #fff ;
+    display: inline-block;
+  }
+  @include firefox_breakpoint(md_landscape){ 
+    display: block;
+    float:left;
+    width: 110px;
+    height: 100vh; 
+    background-color: #74AFAD;
+    color: #fff ;
+    display: inline-block;
+  }
+}
+
+
+.admin-page-wrapper{
+  @include firefox_breakpoint(md_portrait){
+    width: calc(100% - 85px);
+    display: inline-block;
+    float: left;
+  } 
+  @include firefox_breakpoint(md_landscape){
+    width: calc(100% - 110px);
+    display: inline-block;
+    float: left;
+  } 
+}
+
+.admin-destock-nav ul li:first-child{ 
+  margin-top: 70px;
+
+}
+
+.nav-item, .nav-item a { 
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &:hover{
+    background-color: #4e8886;
+    color:#ffffe5;
+    text-decoration: none;
+
+  }
+}
+
+.logo-item{ 
+  display: block;
+}
+
+// Navigation for Mobile 
+
+.admin-mobile-nav{
+  display: block;
+  @include firefox_breakpoint(md_portrait){
+    display:none;
+  }
+
+  @include firefox_breakpoint(md_landscape){
+    display:none;
+  }
+}
+
+.admin-custom-nav {
+    background-color:#74AFAD;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.admin-custom-nav .navbar-nav > li > a {
+    color:#fff;
+}
+
+
+ul.nav a:hover { 
+  color: #ffffe5 !important; 
+  background-color: #4e8886;
+}
+
+
+.admin-custom-nav .navbar-brand {
+    color:#fff;
+}
+
+.navbar-custom .navbar-toggle {
+    color:#fff;
+    background:#fff;
+}
+
+ .navbar-toggle > .icon-bar {
+    color:#ccc !important;
+    background:#ccc !important;
+}
+
+//
+

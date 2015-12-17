@@ -1,0 +1,63 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Blog
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+
+  .admin-destock-nav
+    %ul.list-unstyled
+      %li.text-center
+        .nav-item
+          = link_to root_path do  
+            %i.fa.fa-user.fa-2x.logo-item 
+            My profile
+      %li.text-center
+        .nav-item
+          = link_to root_path do  
+            %i.fa.fa-newspaper-o.fa-2x.logo-item 
+            Posts
+      %li.text-center
+        .nav-item
+          = link_to root_path do  
+            %i.fa.fa-laptop.fa-2x.logo-item 
+            Apps  
+      %li.text-center
+        .nav-item
+          = link_to root_path do  
+            %i.fa.fa-eye.fa-2x.logo-item 
+            Visitor Mode
+
+  .admin-mobile-nav
+    %nav.navbar.admin-custom-nav{:role => "navigation"}
+      .navbar-header
+        %button.navbar-toggle{"data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => '/articles'} Blog Admin
+      #navbarCollapse.collapse.navbar-collapse
+        %ul.nav.navbar-nav
+          %li
+            = link_to "My Profile", root_path
+          %li
+            = link_to "My Posts", root_path
+          %li
+            = link_to "My apps", root_path
+          %li
+            = link_to "Visitor mode", root_path
+          %li
+            - if user_signed_in?
+              = link_to 'Log out', destroy_user_session_path, method: :delete
+
+  .admin-page-wrapper 
+    .container 
+      .row
+        .col-xs-12
+          %p afaire a suivre 
+
+          %body
+            = yield
