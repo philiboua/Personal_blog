@@ -10,7 +10,7 @@ RSpec.feature "Blog registration workflow" do
   context "the blog has no user registered " do 
 
     background do
-      given_the_user_visit_the_home_page
+      given_the_user_visits_the_home_page
       when_user_clicks_on_create_your_blog
       then_user_is_redirected_to_registration_page 
     end 
@@ -39,16 +39,16 @@ RSpec.feature "Blog registration workflow" do
 
   end
 
-  ## Context: the blog has no user registered 
+  ## Context the blog has no user registered 
 
     #background to both scenarios
 
-  def given_the_user_visit_the_home_page
+  def given_the_user_visits_the_home_page
     visit root_path
   end
 
   def when_user_clicks_on_create_your_blog
-    click_link 'create your blog'
+    click_link 'Start your blog'
   end
 
   def then_user_is_redirected_to_registration_page
@@ -82,7 +82,7 @@ RSpec.feature "Blog registration workflow" do
     expect( page.current_path).to eq('/users')
   end
 
-  ## Context: the blog has one user registered
+  ## Context User is already registered 
 
     #Scenario User is logged in
 

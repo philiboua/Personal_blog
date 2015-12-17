@@ -1,0 +1,37 @@
+// Firefox breakpoint for different devices 
+
+  @mixin firefox_breakpoint($class) {
+
+
+  @if $class == xs_portrait {
+    @media (max-width: 320px) and (orientation: portrait){ @content; }
+  }
+
+  @if $class == xs_landscape {
+    @media (max-width: 480px) and (orientation: landscape){ @content; }
+  }
+
+  @else if $class == sm_portrait {
+    @media (min-width: 360px) and (orientation: portrait){ @content; }
+  }
+
+  @else if $class == sm_landscape {
+    @media (min-width: 360px) and (orientation: landscape) { @content; }
+  }
+ 
+  @else if $class == md_portrait {
+    @media (min-width: 768px) and (orientation: portrait) { @content; }
+  }
+
+  @else if $class == md_landscape {
+    @media (min-width: 768px) and (orientation: landscape){ @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+ 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg;"
+  }
+}

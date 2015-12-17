@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   get 'home/index'
 
   root to: 'home#index'
-  resources :profiles, except: [:destroy]
+  resources :profiles
 end

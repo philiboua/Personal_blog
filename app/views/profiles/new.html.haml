@@ -1,0 +1,10 @@
+.container 
+  .row 
+    .col-xs-12.col-md-6.col-centered
+      = simple_form_for @profile do |f|
+        = f.input :first_name 
+        = f.input :last_name 
+        = f.input :photo
+        = f.input :blog_title
+        = f.input :about_me 
+        = f.button :submit 

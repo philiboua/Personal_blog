@@ -1,0 +1,8 @@
+.registration-button{ 
+  @include button-variant(#fff,#558C89,#558C89);
+  margin-top: 200px; 
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 100;
+
+}

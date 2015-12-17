@@ -8,9 +8,9 @@ source 'https://rubygems.org'
   gem 'jquery-rails'
   gem 'turbolinks'
   gem 'jbuilder', '~> 2.0'
-  gem "refile", require: "refile/rails"
-  gem "refile-mini_magick"
-  gem "refile-s3"
+  gem 'carrierwave'
+  gem 'fog'
+  gem 'mini_magick'
   gem 'devise'
   gem "figaro"
   gem 'haml-rails'
@@ -18,14 +18,12 @@ source 'https://rubygems.org'
   gem 'simple_form'
   gem 'sdoc', '~> 0.4.0', group: :doc
 
-  group :development do
+
+  group :development, :test do
     gem 'sqlite3'
     gem 'web-console', '~> 2.0'
     gem 'spring'
-  end
-
-  group :development, :test do
-    gem 'rspec-rails'
+    gem 'rspec-rails', '~> 3.0'
     gem 'spring-commands-rspec'
     gem 'guard-rspec', require: false
     gem 'byebug'

@@ -7,6 +7,9 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "base/_shared.scss";
+@import "base/_mixins.scss";
+@import "modules/home.scss";
 
 
 
