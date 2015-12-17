@@ -33,6 +33,11 @@ source 'https://rubygems.org'
     gem 'factory_girl_rails', '~> 4.0'
   end
 
+  group :production do
+    gem 'pg'
+    gem 'rails_12factor'
+  end
+
   group :test do 
     gem 'launchy', '~> 2.4', '>= 2.4.3'
     gem 'shoulda-matchers', require: false
