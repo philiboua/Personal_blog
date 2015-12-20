@@ -1,7 +1,7 @@
 class HomeController < ApplicationController 
 
   layout 'visitor', only: [:about_me]
-  #before_action :blog_has_admin_user?, only: [:index]
+  before_action :blog_has_admin_user?, only: [:index]
 
   def index 
   end 
