@@ -10,6 +10,7 @@ source 'https://rubygems.org'
   gem 'jbuilder', '~> 2.0'
   gem 'carrierwave'
   gem 'fog'
+  gem 'friendly_id', '~> 5.1.0'
   gem "font-awesome-rails"
   gem 'mini_magick'
   gem 'devise'
