@@ -1,0 +1,9 @@
+- if @posts.present?
+  - @posts.each do |post|
+    = post.title
+    = link_to 'view post'
+    = link_to 'edit post' 
+    = link_to 'delete this post'
+  = link_to 'write a new post', new_post_path, class: 'btn btn-default'
+- else 
+  = link_to 'write a new post', new_post_path,  class: 'btn btn-default'    

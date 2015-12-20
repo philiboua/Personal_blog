@@ -10,9 +10,7 @@ RSpec.feature "Blog registration workflow" do
   context "the blog has no user registered " do 
 
     background do
-      given_the_user_visits_the_home_page
-      when_user_clicks_on_create_your_blog
-      then_user_is_redirected_to_registration_page 
+      given_the_user_visits_the_registration_page
     end 
 
     scenario "User successfully registered" do 
@@ -43,17 +41,12 @@ RSpec.feature "Blog registration workflow" do
 
     #background to both scenarios
 
-  def given_the_user_visits_the_home_page
+  def given_the_user_visits_the_registration_page
     visit root_path
-  end
-
-  def when_user_clicks_on_create_your_blog
     click_link 'Start your blog'
-  end
-
-  def then_user_is_redirected_to_registration_page
     expect( page.current_path ).to eq( new_user_registration_path )
   end
+
 
     # methods specific to scenario "User successfully registered"
 
@@ -61,7 +54,7 @@ RSpec.feature "Blog registration workflow" do
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: user.password
     fill_in 'user_password_confirmation', with: user.password
-    click_button 'Start your blog'
+    click_button 'create your blog'
   end
 
   def then_user_is_redirected_to_new_profile_page
@@ -75,7 +68,7 @@ RSpec.feature "Blog registration workflow" do
     fill_in 'user_email', with: user.email
     fill_in 'user_password', with: 'hello'
     fill_in 'user_password_confirmation', with: 'hello'
-    click_button 'Start your blog'
+    click_button 'create your blog'
   end
 
   def then_user_needs_to_correct_sign_up_form_information
@@ -84,12 +77,13 @@ RSpec.feature "Blog registration workflow" do
 
   ## Context User is already registered 
 
-    #Scenario User is logged in
+    #Scenario User is logged in ; we assume a profile has been created 
 
   def the_user_is_redirected_to_home_page
-    login_as(registered_user, :scope => :user)
-    visit new_user_registration_path
-    expect( page.current_path ).to eq( root_path )
+    login_as(registered_user, :scope => :user) 
+    create(:profile) 
+    visit posts_path
+    expect( page.current_path ).to eq( posts_path )
   end
 
     #Scenario User is not logged in 

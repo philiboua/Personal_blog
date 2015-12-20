@@ -1,0 +1,7 @@
+= @profile.first_name 
+= @profile.last_name 
+= @profile.blog_title
+= @profile.photo 
+= @profile.about_me 
+
+= link_to 'edit profile', edit_profile_path(@profile.id)

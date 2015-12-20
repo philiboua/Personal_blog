@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
 
   #relational database 
   has_one :profile
+  has_many :posts
 end

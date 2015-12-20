@@ -19,6 +19,6 @@ class Profile < ActiveRecord::Base
   mount_uploader :photo, PhotoUploader
 
   #validation 
-  validates_presence_of :first_name, :last_name, :blog_title 
+  validates_presence_of :first_name, :last_name, :blog_title, :about_me
 
 end

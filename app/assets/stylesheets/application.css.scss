@@ -11,10 +11,13 @@
 // Base
 @import "base/_shared.scss";
 @import "base/_mixins.scss";
+@import "base/_normalize.scss";
 
 // Modules
 @import "modules/home.scss";
 @import "modules/admin-layout.scss";
+@import "modules/visitor-layout.scss";
+
 
 
 
