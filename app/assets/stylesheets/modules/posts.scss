@@ -4,3 +4,47 @@
   text-align: center;
   border: 1px solid #ccc;
 }
+
+// Posts
+
+.title-article { 
+  
+  text-align: center; 
+  margin-bottom: 80px;
+
+
+}
+
+.p-article { 
+  .line-height: 1.8;
+  font-size: 19px !important;
+
+
+}
+
+blockquote { 
+  
+  border-left: 5px solid #558C89;
+  font-size: 20px;
+
+
+}
+
+
+.article-preview { 
+  
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #ccc;
+
+}
+
+.title-article-preview > a {
+    
+    color: #7a7a7a;
+    &:hover {
+      color: #74AFAD;
+      text-decoration: none;
+    }
+  
+
+}

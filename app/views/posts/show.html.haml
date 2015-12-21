@@ -1,7 +1,7 @@
-
-%h2.title-article
-  = markdown(@post.title)
-.p-article{style: 'font-size: 20px;'}
-  = markdown(@post.body)
-.coments
+.col-md-8.col-centered
+  %h2.title-article
+    = markdown(@post.title)
+  .p-article{style: 'font-size: 20px;'}
+    = markdown(@post.body)
+  .coments
    

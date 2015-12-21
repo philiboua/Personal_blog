@@ -1,0 +1,9 @@
+.col-md-8.col-centered
+  - if @posts.present?
+    - @posts.each do |post| 
+      .article-preview
+        %h3.title-article-preview
+          = link_to "#{post.title}", post_path(post.id)
+        %p
+          = markdown post.body.first(210) + "..."
+        = link_to 'read more',post_path(post.id)
