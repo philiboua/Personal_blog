@@ -1,5 +1,6 @@
 .admin-destock-nav { 
   display: none;
+  position: fixed;
   @include firefox_breakpoint(md_portrait){ 
     display: block;
     float:left;
@@ -75,6 +76,8 @@
     background-color:#74AFAD;
     color:#ffffff;
     border-radius:0;
+    margin-bottom: 20px;
+
 }
 
 .admin-custom-nav .navbar-nav > li > a {

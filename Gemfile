@@ -12,6 +12,8 @@ source 'https://rubygems.org'
   gem 'fog'
   gem 'friendly_id', '~> 5.1.0'
   gem "font-awesome-rails"
+  gem 'redcarpet','~> 3.2.2'
+  gem 'pygments.rb','~> 0.6.0'
   gem 'mini_magick'
   gem 'devise'
   gem "figaro"

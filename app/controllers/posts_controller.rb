@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post.update_attributes(post_params)
       redirect_to @post 
     else

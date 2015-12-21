@@ -1,9 +1,17 @@
+%h1.text-center 
+  Posts published 
+
 - if @posts.present?
   - @posts.each do |post|
-    = post.title
-    = link_to 'view post'
-    = link_to 'edit post' 
-    = link_to 'delete this post'
-  = link_to 'write a new post', new_post_path, class: 'btn btn-default'
+    .col-md-6.col-xs-4
+      %h4.post-title
+        = post.title
+      .post-links
+        = link_to 'view post', post_path(post.title), class: 'btn btn-default full-width'
+        = link_to 'edit post', edit_post_path(post.title), class: 'btn btn-default full-width'
+        = link_to 'delete post', "", class: 'btn btn-default full-width' 
+  .col-md-6.col-xs-4
+    %h3.new-post
+      = link_to 'write a new post', new_post_path, class: 'btn btn-default'
 - else 
   = link_to 'write a new post', new_post_path,  class: 'btn btn-default'    
