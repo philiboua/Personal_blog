@@ -3,5 +3,6 @@
     = markdown(@post.title)
   .p-article{style: 'font-size: 20px;'}
     = markdown(@post.body)
-  .coments
+  .comments
+    = render 'post_comments'
    
