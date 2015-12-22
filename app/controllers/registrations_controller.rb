@@ -1,10 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
 
-  before_action :user_registered?
+  before_action :single_user_registered?
   
   protected
 
-  def user_registered?
+  def single_user_registered?
     if ((User.count == 1) & (user_signed_in?))
       redirect_to root_path
     elsif User.count == 1

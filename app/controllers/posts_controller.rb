@@ -3,6 +3,7 @@ class PostsController < ApplicationController
 
   layout :visitor_or_admin?
   before_action :authenticate_user!, except: [:show, :index]
+  respond_to :html, :js
 
   def new 
     @post = Post.new
@@ -40,6 +41,18 @@ class PostsController < ApplicationController
 
   def manage_posts
     @posts = Post.all
+  end
+
+  def destroy 
+    @post = Post.friendly.find(params[:id])
+    if @post.destroy 
+      flash[:notice] = "the post has been deleted"
+    else 
+      flash[:error] = "An error occured, please try again"
+    end
+    respond_with(@post) do |f|
+      f.html { redirect_to :back }
+    end
   end
 
   private 

@@ -66,37 +66,41 @@ describe PostsController do
       let(:post) { create(:post, title: "I will become a web developer soon...") }
 
       context "with valid attributes" do 
+
+        before { allow(Post).to receive_message_chain(:friendly, :find).and_return(post)}
         
         it "locates the requested @post" do 
-          patch :update, id: post.title, post: attributes_for(:post)
+          patch :update, id: post.to_param, post: attributes_for(:post)
           expect(assigns(:post)).to eq(post)
         end
 
         it "changes the @post attributes" do 
-          patch :update, id: post.title, post: attributes_for(:post, title: 'how to test your rails app')
+          patch :update, id: post.to_param, post: attributes_for(:post, title: 'how to test your rails app')
           expect(Post.first.title).to eq('how to test your rails app')
         end
 
         it "redirects to updated @post" do 
-          patch :update, id: post.title, post: attributes_for(:post, title: 'how to test your rails app' )
+          patch :update, id: post.to_param, post: attributes_for(:post, title: 'how to test your rails app' )
           expect(response).to redirect_to(Post.last)
         end
       end
 
       context "with invalid attributes" do 
 
+        before { allow(Post).to receive_message_chain(:friendly, :find).and_return(post)}
+
         it "locates the requested @post" do 
-          patch :update, id: post.title, post: attributes_for(:post)
+          patch :update, id: post.to_param, post: attributes_for(:post)
           expect(assigns(:post)).to eq(post)
         end
 
         it "does not change the @post attributes" do
-          patch :update, id: post.title, post: attributes_for(:post, title: nil )
+          patch :update, id: post.to_param, post: attributes_for(:post, title: nil )
           expect(Post.first.title).to eq("I will become a web developer soon...") 
         end
 
         it "re-renders the :edit template" do 
-          patch :update, id: post.title, post: attributes_for(:post, title: nil )
+          patch :update, id: post.to_param, post: attributes_for(:post, title: nil )
           expect( response).to render_template(:edit)
         end
       end 
@@ -107,8 +111,8 @@ describe PostsController do
       before { get :index }
 
       it "assigns the posts object to the @posts variable" do 
-        post1 = create(:post)
-        post2 = create(:post)
+        post1 = create(:post, slug: 'ruby on rails')
+        post2 = create(:post, slug: 'junior web developer')
         expect(assigns(:posts)).to match_array([post1, post2])
       end
 
@@ -122,14 +126,26 @@ describe PostsController do
       before { get :manage_posts }
 
       it "assigns the posts object to the @posts variable" do 
-        post1 = create(:post)
-        post2 = create(:post)
+        post1 = create(:post, slug: 'ruby on rails')
+        post2 = create(:post, slug: 'junior web developer')
         expect(assigns(:posts)).to match_array([post1, post2])
       end
 
       it "renders the index page" do 
         expect(response).to render_template(:manage_posts)
       end
+    end
+
+    describe "DELETE #destroy" do 
+      let(:post) { create(:post, title: "I will become a web developer soon...") }
+      before { allow(Post).to receive_message_chain(:friendly, :find).and_return(post)}
+
+      it "deletes the post with Ajax" do 
+        expect{ 
+          xhr :delete, :destroy, id: post.to_param
+        }.to change(Post, :count).by(-1)
+      end
+
     end
 
   end

@@ -1,0 +1,6 @@
+- if @post.destroyed?
+  $('#post_' +#{@post.id}).hide();
+- else
+  $('#post_' +#{@post.id}).prepend("
+  .alert.alert-danger>= flash[:error]
+  ");
