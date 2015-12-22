@@ -19,7 +19,7 @@ class PostsController < ApplicationController
   end
 
   def index 
-    @posts = Post.all 
+    @posts = Post.paginate(:page => params[:page], :per_page => 6)
   end
 
   def show 
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   end
 
   def manage_posts
-    @posts = Post.all
+   @posts = Post.paginate(:page => params[:page], :per_page => 6)
   end
 
   def destroy 

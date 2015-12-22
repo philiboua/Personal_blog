@@ -7,3 +7,5 @@
         %p
           = markdown post.body.first(210) + "..."
         = link_to 'read more',post_path(post.id)
+    .post-pagination.text-center
+      = will_paginate @posts, renderer: BootstrapPagination::Rails

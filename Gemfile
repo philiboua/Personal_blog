@@ -9,6 +9,8 @@ source 'https://rubygems.org'
   gem 'turbolinks'
   gem 'jbuilder', '~> 2.0'
   gem 'carrierwave'
+  gem 'will_paginate', '~> 3.0.6'
+  gem 'will_paginate-bootstrap'
   gem 'fog'
   gem 'friendly_id', '~> 5.1.0'
   gem "font-awesome-rails"

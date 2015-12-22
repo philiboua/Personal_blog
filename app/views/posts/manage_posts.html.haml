@@ -13,5 +13,7 @@
   .col-md-6.col-xs-4
     %h3.new-post
       = link_to 'write a new post', new_post_path, class: 'btn btn-default'
+  .post-pagination.col-md-12.text-center 
+    = will_paginate @posts, renderer: BootstrapPagination::Rails
 - else 
   = link_to 'write a new post', new_post_path,  class: 'btn btn-default'    
