@@ -1,0 +1,26 @@
+.col-md-9.col-xs-12.col-centered.projects-wrapper
+  - if @apps.present?
+    - @apps.each do |app|
+      %ul.project-details.list-unstyled{:id => dom_id(app)}
+        %li
+          %h2.title-project.text-center
+            = app.name
+
+        .project-image-wrapper
+          %li.text-center
+            = image_tag(app.screenshot_url, class: "image_project" )
+        .project_description.col-md-9.col-centered.text-center
+          %li.project-content
+            = app.content
+          %li
+            = link_to 'Website', app.website
+          %li
+            = link_to 'Github Repository', app.repository
+          %li
+            = link_to 'Edit app info', edit_app_path(app.id)
+          %li
+            = link_to 'Delete app', app, method: :delete,remote: true, data: {confirm: 'Are Sure about that ?'}
+          %li
+            = link_to 'New app', new_app_path 
+  - else 
+    = link_to 'New app', new_app_path 

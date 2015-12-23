@@ -1,0 +1,16 @@
+.col-md-9.col-xs-12.col-centered.apps-wrapper
+  - @apps.each do |app|
+    %ul.app-details.list-unstyled
+      %li
+        %h2.app-title.text-center
+          = app.name
+
+      .app-image-wrapper
+        %li.text-center
+          = image_tag(app.screenshot_url, class: "image_project" )
+      .app-description.col-md-9.col-centered.text-center
+        %li.app-content= app.content
+        %li
+          = link_to 'Website', app.website
+        %li
+          = link_to 'Github Repository', app.repository

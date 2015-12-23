@@ -12,7 +12,7 @@
       %ul.list-unstyled
         %li.text-center
           .nav-item
-            = link_to profile_path(current_user) do  
+            = link_to profile_path(Profile.first.id) do  
               %i.fa.fa-user.fa-2x.logo-item 
               Profile
         %li.text-center
@@ -22,7 +22,7 @@
               Posts
         %li.text-center
           .nav-item
-            = link_to root_path do  
+            = link_to apps_my_apps_path do  
               %i.fa.fa-laptop.fa-2x.logo-item 
               Apps  
         %li.text-center
@@ -43,11 +43,11 @@
         #navbarCollapse.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li
-              = link_to "My Profile", profile_path(current_user)
+              = link_to "My Profile", profile_path(Profile.first.id)
             %li
               = link_to "My Posts", posts_manage_posts_path
             %li
-              = link_to "My apps", root_path
+              = link_to "My apps", apps_my_apps_path
             %li
               = link_to "Visitor mode", root_path
             %li

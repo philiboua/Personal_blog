@@ -6,7 +6,7 @@ class Profile < ActiveRecord::Base
     t.string :first_name
     t.string :last_name
     t.string :blog_title
-    t.string :image
+    t.string :photo
     t.string :about_me
     t.references :user, index: true, foreign_key: true
 

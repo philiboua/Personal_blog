@@ -21,7 +21,7 @@ RSpec.feature 'User changes profile information' do
 
     def given_the_user_visits_profile_edit_page
       login_as(registered_user, scope: :user)
-      @profile = create(:profile)
+      profile = create(:profile)
 
       visit posts_path 
       expect(page.current_path).to eq( posts_path)
@@ -30,10 +30,10 @@ RSpec.feature 'User changes profile information' do
       expect(page.current_path).to eq( posts_manage_posts_path )
 
       click_link "Profile"
-      expect(page.current_path).to eq( profile_path(@profile.id) )
+      expect(page.current_path).to eq( profile_path(Profile.first) )
 
       click_link "edit profile"
-      expect(page.current_path).to eq( edit_profile_path(@profile.id))
+      expect(page.current_path).to eq( edit_profile_path(Profile.first))
     end
 
     def when_user_submits_form_with_valid_information
@@ -53,7 +53,7 @@ RSpec.feature 'User changes profile information' do
     end
 
     def then_user_redirected_to_updated_profile 
-      expect(page.current_path).to eq( profile_path(@profile.id) ) 
+      expect(page.current_path).to eq( profile_path(Profile.first) ) 
       expect(page).to have_content("Peter")
       expect(page).to have_content("alleee")
       expect(page).to have_content("New")

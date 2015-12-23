@@ -1,6 +1,5 @@
 class PostsController < ApplicationController 
 
-
   layout :visitor_or_admin?
   before_action :authenticate_user!, except: [:show, :index]
   respond_to :html, :js

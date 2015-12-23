@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
     if @profile.save
       redirect_to @profile 
     else
-      render :new
+      render :new, layout: "application"
     end
   end
 

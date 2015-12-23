@@ -56,7 +56,7 @@ describe PostsController do
         expect(assigns(:post)).to eq post
       end
 
-      it "render the edit template " do 
+      it "renders the edit template " do 
         expect( response ).to render_template(:edit)
       end
     end
@@ -145,7 +145,6 @@ describe PostsController do
           xhr :delete, :destroy, id: post.to_param
         }.to change(Post, :count).by(-1)
       end
-
     end
 
   end

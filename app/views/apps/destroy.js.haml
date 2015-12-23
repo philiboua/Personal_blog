@@ -1,0 +1,6 @@
+- if @app.destroyed?
+  $('#app_' +#{@app.id}).hide();
+- else
+  $('#app_' +#{@app.id}).prepend("
+  .alert.alert-danger>= flash[:error]
+  ");
