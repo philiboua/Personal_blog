@@ -5,7 +5,7 @@
         - if post.image.present?
           = image_tag(post.image_url, class: 'post-image')
         %h3.title-article-preview
-          = link_to "#{post.title}", post_path(post.id)
+          = link_to "#{post.title}", post_path(post.title)
         %p
           = markdown post.body.first(210) + "..."
         = link_to 'read more',post_path(post.id)

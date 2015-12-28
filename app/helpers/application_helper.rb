@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def root_active_link(path)
-    'active_link' if (current_page?(path) || current_page?(root_path))   
+    'active_link' if (current_page?(path) || current_page?(posts_path))   
   end
 
 end

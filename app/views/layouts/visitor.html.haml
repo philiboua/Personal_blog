@@ -25,13 +25,13 @@
           %nav
             %ul.text-center.list_unstyled
               %li
-                = link_to "Blog", posts_path
+                = link_to "Blog", posts_path, class: root_active_link(posts_path)
               %li
-                = link_to "My Apps", apps_path
+                = link_to "My Apps", apps_path, class: active_link(apps_path)
               %li
-                = link_to "About me", home_about_me_path
+                = link_to "About me", home_about_me_path, class: active_link(home_about_me_path)
               %li
-                = link_to "Contact", home_contact_path
+                = link_to "Contact", home_contact_path, class: active_link(home_contact_path)
               - if user_signed_in?
                 %li 
                   = link_to 'Admin Page', posts_manage_posts_path
