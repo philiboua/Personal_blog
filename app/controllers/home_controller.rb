@@ -1,6 +1,6 @@
 class HomeController < ApplicationController 
 
-  layout 'visitor', only: [:about_me]
+  layout 'visitor', only: [:about_me, :contact]
   before_action :blog_has_admin_user?, only: [:index]
 
   def index 
@@ -8,6 +8,9 @@ class HomeController < ApplicationController
 
   def about_me 
     @profile = Profile.first
+  end
+
+  def contact
   end
 
   private 
