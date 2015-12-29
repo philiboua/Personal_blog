@@ -7,8 +7,8 @@
       %h4.post-title
         = post.title
       .post-links
-        = link_to 'view post', post_path(post.title), class: 'btn btn-default full-width'
-        = link_to 'edit post', edit_post_path(post.title), class: 'btn btn-default full-width'
+        = link_to 'view post', post_path(post.slug), class: 'btn btn-default full-width'
+        = link_to 'edit post', edit_post_path(post.slug), class: 'btn btn-default full-width'
         = link_to 'delete post', post, method: :delete,remote: true, data: {confirm: 'Are Sure about that ?'}, class: 'btn btn-default full-width'
   .col-md-6.col-xs-4
     %h3.new-post

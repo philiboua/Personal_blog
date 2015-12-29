@@ -3,5 +3,5 @@
   = f.input :last_name 
   = f.input :photo
   = f.input :blog_title
-  = f.input :about_me 
+  = f.input :about_me, :input_html => {:rows => 12, style: 'max-width:100%; height:100%;'} 
   = f.button :submit 
