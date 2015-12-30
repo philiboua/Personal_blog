@@ -1,7 +1,8 @@
 .col-md-8.col-centered
   %h2.title-article
     = markdown(@post.title)
-  = image_tag(@post.image_url, class: 'post-image')
+  - if @post.image.present?
+    = image_tag(@post.image_url, class: 'post-image')
   .p-article{style: 'font-size: 20px;'}
     = markdown(@post.body)
   .comments

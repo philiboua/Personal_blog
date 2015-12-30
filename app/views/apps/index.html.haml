@@ -12,8 +12,8 @@
         %li.app-content
           = app.content
         %li
-          = link_to 'Website', app.website
+          = link_to 'Website', "//#{app.website}"
         - if app.repository.present?
           %li
-            = link_to 'Github Repository', app.repository
+            = link_to 'Github Repository', "//#{app.repository}"
 

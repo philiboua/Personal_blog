@@ -8,12 +8,12 @@
 
         .project-image-wrapper
           %li.text-center
-            = image_tag(app.screenshot_url, class: "image_project" )
+            = image_tag(app.screenshot_url, class: "screenshot-app" )
         .project_description.col-md-9.col-centered.text-center
           %li.project-content
             = app.content
           %li
-            = link_to 'Website', app.website
+            = link_to 'Website', "http://#{app.website}"
           %li
             = link_to 'Github Repository', app.repository
           %li
