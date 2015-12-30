@@ -2,8 +2,6 @@
   - if @posts.present?
     - @posts.each do |post| 
       .article-preview
-        - if post.image.present?
-          = image_tag(post.image_url, class: 'post-image')
         %h3.title-article-preview
           = link_to "#{post.title}", post_path(post.slug)
         %p
