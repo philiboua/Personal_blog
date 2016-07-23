@@ -22,6 +22,7 @@ source 'https://rubygems.org'
   gem "figaro"
   gem 'haml-rails'
   gem 'bootstrap-sass'
+  gem 'faker'
   gem 'simple_form'
   gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -35,7 +36,6 @@ source 'https://rubygems.org'
     gem 'spring-commands-rspec'
     gem 'guard-rspec', require: false
     gem 'byebug'
-    gem 'faker'
     gem 'pry'
     gem 'database_cleaner'
     gem 'factory_girl_rails', '~> 4.0'
