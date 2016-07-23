@@ -31,6 +31,7 @@ source 'https://rubygems.org'
     gem 'web-console', '~> 2.0'
     gem 'spring'
     gem 'rspec-rails', '~> 3.0'
+    gem 'rspec-example_steps'
     gem 'spring-commands-rspec'
     gem 'guard-rspec', require: false
     gem 'byebug'

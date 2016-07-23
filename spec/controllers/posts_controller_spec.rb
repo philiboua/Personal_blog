@@ -64,10 +64,10 @@ describe PostsController do
     describe "PATCH #update" do
       
       let(:post) { create(:post, title: "I will become a web developer soon...") }
+      before { allow(Post).to receive_message_chain(:friendly, :find).and_return(post)}
 
       context "with valid attributes" do 
 
-        before { allow(Post).to receive_message_chain(:friendly, :find).and_return(post)}
         
         it "locates the requested @post" do 
           patch :update, id: post.to_param, post: attributes_for(:post)
