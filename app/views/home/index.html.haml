@@ -1,24 +1,7 @@
 .homepageBg
-  .homepageHeader
-    .container{style: 'width: 90%'}
-      .row
-        .col-md-12
-          .destockMenuWp
-            .logo.pull-left
-              = image_tag('logo.png')
-            .menu.pull-right
-              %ul
-                %li.menuLink
-                  = link_to "BLOG", "#", class: 'cool-link'
-                  
-                %li.menuLink
-                  = link_to "PORTOFOLIO", "#", class: 'cool-link'
-                  
-                %li.menuLink
-                  = link_to "RESUME", "#", class: 'cool-link'
-                  
-                %li.menuLink
-                  = link_to "CONTACT", "https://philippeaka.typeform.com/to/AV9HXT", class: 'cool-link'
+  = render 'shared/header'
+  
+  
 
   .homepageBody
     .container{style: 'width: 90%'}

@@ -10,6 +10,9 @@ class HomeController < ApplicationController
     @profile = Profile.first
   end
 
+  def resume
+  end
+
   def contact
   end
 

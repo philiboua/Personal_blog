@@ -9,6 +9,11 @@
 
 }
 
+.resume{
+  @extend .homepageBg;
+  background-color: #fff;
+}
+
 .menu > ul {
   padding-left: 0px;
   margin-top: 60px;
@@ -59,6 +64,10 @@
   line-height: 4.5rem;
   padding-bottom: 140px;
   padding-left: 120px;
+
+  @include firefox_breakpoint(xs_portrait){
+    font-size: 1rem;
+  }
 
 }
 

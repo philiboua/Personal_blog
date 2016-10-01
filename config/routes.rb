@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   #static page
   get 'home/get_started'
+  get 'home/resume'
   get 'home/index'
   get 'home/test'
   get 'home/about_me'

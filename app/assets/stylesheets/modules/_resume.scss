@@ -1,0 +1,52 @@
+.resumeBg{
+  @include full-img-bg('');
+  background-color: #fff;
+  border: 20px solid #fff;
+
+}
+
+.headerWp{
+  height: 300px ;
+  background: #161616;
+  width: 100%;
+}
+
+.logoStyles{
+  width: 140px;
+  height: 100px;
+}
+
+.pcMenu > ul {
+  margin-left: 0px;
+  margin-top: 40px;
+}
+
+.pcMenu > ul > li {
+  list-style:none;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.pcMenu > ul > li > a {
+  color: #fff;
+  font-size: 1.2rem;
+  &:hover{
+    text-decoration: none;
+    color: #ea0001;
+  }
+}
+
+
+.titlePage > h4 {
+  padding-top: 60px;
+  color: #fff;
+  font-size: 26px;
+  padding-bottom: 40px;
+  font-style: italic;
+}
+
+.red-text{
+  color: #ea0001;
+}
+
+

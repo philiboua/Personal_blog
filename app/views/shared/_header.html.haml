@@ -1,0 +1,21 @@
+%Header
+  .container
+    .row
+      .col-md-12
+        .pcMenuWp
+          .pcMenuLogo.pull-left
+            = link_to "/" do 
+              = image_tag('logo.png', class: 'logoStyles')
+          .pcMenu.pull-right
+            %ul
+              %li
+                = link_to "BLOG", "#", class: "cool-link #{active_link('')}"
+                
+              %li
+                = link_to "PORTOFOLIO", "#", class: "cool-link #{active_link('')}"
+                
+              %li
+                = link_to "RESUME", home_resume_path , class: "cool-link #{active_link(home_resume_path)}"
+                
+              %li
+                = link_to "CONTACT", "https://philippeaka.typeform.com/to/AV9HXT", class: "cool-link #{active_link('')}"
