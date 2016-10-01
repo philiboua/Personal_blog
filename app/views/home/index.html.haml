@@ -1,5 +1,31 @@
-.blog-wrapper 
-  .container
-    .row 
-      .col-xs-12
-        = link_to 'Start your blog', new_user_registration_path, class: 'btn registration-button'
+.homepageBg
+  .homepageHeader
+    .container{style: 'width: 90%'}
+      .row
+        .col-md-12
+          .destockMenuWp
+            .logo.pull-left
+              = image_tag('logo.png')
+            .menu.pull-right
+              %ul
+                %li.menuLink
+                  = link_to "BLOG", "#", class: 'cool-link'
+                  
+                %li.menuLink
+                  = link_to "PORTOFOLIO", "#", class: 'cool-link'
+                  
+                %li.menuLink
+                  = link_to "RESUME", "#", class: 'cool-link'
+                  
+                %li.menuLink
+                  = link_to "CONTACT", "#", class: 'cool-link'
+
+  .homepageBody
+    .container{style: 'width: 90%'}
+      .row
+        .col-md-12
+
+          %h3.homepageTitle
+            Philippe <span> AKA </span> Full stack developer
+            %br/
+            Just in case, <span> AKA </span>  is my real last name ;) 

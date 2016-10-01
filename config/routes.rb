@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   #static page
+  get 'home/get_started'
   get 'home/index'
   get 'home/test'
   get 'home/about_me'

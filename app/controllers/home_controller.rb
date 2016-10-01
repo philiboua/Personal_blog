@@ -13,13 +13,16 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def get_started
+  end
+
   private 
 
   def blog_has_admin_user?
     if User.count == 1 
-      redirect_to posts_path
-    else
       render :index
+    else
+      render :get_started
     end
   end
   

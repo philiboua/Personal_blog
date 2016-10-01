@@ -35,3 +35,11 @@
     @warn "Breakpoint mixin supports: xs, sm, md, lg;"
   }
 }
+
+@mixin full-img-bg($image-url)  {
+    background-image: url(image_path($image-url));
+    height: 100vh;
+    background-size: cover;
+    background-position:  center;
+    @content;
+  }

@@ -1,3 +1,74 @@
+
+// home index
+
+.homepageBg{ 
+
+  @include full-img-bg('');
+  background-color: #161616;
+  border: 20px solid #fff;
+
+}
+
+.menu > ul {
+  padding-left: 0px;
+  margin-top: 60px;
+}
+
+.menu> ul > li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 30px;
+}
+
+ .menu> ul > li  > a {
+    color: #fff;
+    font-size: 20px;
+    &:hover{
+      text-decoration: none;
+      color: #ea0001;
+    }
+  }
+
+  .cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ea0001;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    //transition: width .4s;
+}
+
+
+    
+
+.homepageBody{
+  position: absolute;
+  bottom: 0; 
+  left: 0;
+  width: 100%;
+}
+
+.homepageTitle {
+  font-size: 3.4rem;
+  color: #fff;
+  line-height: 4.5rem;
+  padding-bottom: 140px;
+  padding-left: 120px;
+
+}
+
+.homepageTitle > span {
+  color: #ea0001;
+}
+
+
+
+
 .registration-button{ 
   @include button-variant(#fff,#558C89,#558C89);
   margin-top: 260px; 
