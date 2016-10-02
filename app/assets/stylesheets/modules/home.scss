@@ -5,7 +5,15 @@
 
   @include full-img-bg('');
   background-color: #161616;
-  border: 20px solid #fff;
+  
+
+  @include firefox_breakpoint(md_portrait){
+    border: 20px solid #fff;
+  }
+
+  @include firefox_breakpoint(md_landscape){
+    border: 20px solid #fff;
+  }
 
 }
 
