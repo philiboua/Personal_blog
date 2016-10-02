@@ -81,7 +81,7 @@
 
 .navigation-mobile-wrapper{
   @include firefox_breakpoint(md_portrait){
-    display:block;
+    display:none;
   }
 
   @include firefox_breakpoint(md_landscape){
@@ -91,7 +91,7 @@
 }
 
 .navbar-custom {
-    background-color:#74AFAD;
+    background-color:#161616;
     color:#ffffff;
     border-radius:0;
 }
@@ -102,8 +102,8 @@
 
 
 ul.nav a:hover { 
-  color: #fff !important; 
-  background-color: #4e8886;
+  color: #ea0001 !important; 
+
 }
 
 
@@ -112,8 +112,8 @@ ul.nav a:hover {
 }
 
 .navbar-custom .navbar-toggle {
-    color:#fff;
-    background:#fff;
+    color:#ea0001;
+    background:#161616;
 }
 
  .navbar-toggle > .icon-bar {

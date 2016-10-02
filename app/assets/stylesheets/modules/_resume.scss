@@ -1,4 +1,4 @@
-.resumeBg{
+.pageBg{
   @include full-img-bg('');
   background-color: #fff;
   border: 20px solid #fff;
@@ -15,6 +15,22 @@
   width: 140px;
   height: 100px;
 }
+
+
+
+.pcMenuWp{
+  display: none;
+
+  @include firefox_breakpoint(md_portrait){
+    display : block;
+  }
+  @include firefox_breakpoint(md_landscape){
+    display : block;
+  }
+}
+
+
+
 
 .pcMenu > ul {
   margin-left: 0px;
@@ -38,7 +54,7 @@
 
 
 .titlePage > h4 {
-  padding-top: 60px;
+  padding-top: 140px;
   color: #fff;
   font-size: 26px;
   padding-bottom: 40px;

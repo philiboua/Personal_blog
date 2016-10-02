@@ -10,63 +10,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    .navigation-wrapper
-      .clearfix
-        .bloger-info.pull-left
-          - if Profile.first.photo.present?
-            = link_to root_path do 
-              = image_tag(Profile.first.photo_url, class: 'my_picture')
-              %p.bloger-name 
-                = Profile.first.blog_title 
-          - else    
-            = link_to '' do 
-              %p.bloger-name 
-                = Profile.first.blog_title 
-        
-        .blog-menu.pull-right
-          %nav
-            %ul.text-center.list_unstyled
-              %li
-                = link_to "Blog", posts_path, class: root_active_link(posts_path)
-              %li
-                = link_to "My Apps", apps_path, class: active_link(apps_path)
-              %li
-                = link_to "About me", home_about_me_path, class: active_link(home_about_me_path)
-              %li
-                = link_to "Contact", home_contact_path, class: active_link(home_contact_path)
-              - if user_signed_in?
-                %li 
-                  = link_to 'Admin Page', posts_manage_posts_path
-                %li
-                  = link_to 'Log out', destroy_user_session_path, method: :delete
-
-
-
-    .navigation-mobile-wrapper
-      %nav.navbar.navbar-custom{:role => "navigation"}
-        .navbar-header
-          %button.navbar-toggle{"data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.navbar-brand{:href => '/articles'} Philippe Aka | Web developer
-        #navbarCollapse.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-            %li
-              = link_to "Blog", posts_path
-            %li
-              = link_to "My Apps", apps_path
-            %li
-              = link_to "About me", home_about_me_path
-            %li
-              = link_to "Contact", home_contact_path
-            %li
-              - if user_signed_in?
-                %li 
-                  = link_to 'Blog Admin', posts_manage_posts_path
-                %li
-                  = link_to 'Log out', destroy_user_session_path, method: :delete
+    
                 
           
     .container
@@ -86,5 +30,5 @@
               %button.close{"data-dismiss" => "alert", :type => "button"} ×
               = flash[:alert]
         
-        = yield
+    = yield
  

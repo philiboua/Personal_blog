@@ -86,8 +86,8 @@
 
 
 ul.nav a:hover { 
-  color: #ffffe5 !important; 
-  background-color: #4e8886;
+  color: #ea0001 !important; 
+  background-color: #161616;
 }
 
 
@@ -97,12 +97,16 @@ ul.nav a:hover {
 
 .navbar-custom .navbar-toggle {
     color:#fff;
-    background:#fff;
+    background:#161616;
 }
 
  .navbar-toggle > .icon-bar {
     color:#ccc !important;
     background:#ccc !important;
+}
+
+.navbar-toggle{
+  margin-top: 25px !important;
 }
 
 //

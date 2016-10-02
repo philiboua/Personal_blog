@@ -1,21 +1,54 @@
-%Header
-  .container
-    .row
-      .col-md-12
-        .pcMenuWp
-          .pcMenuLogo.pull-left
-            = link_to "/" do 
-              = image_tag('logo.png', class: 'logoStyles')
-          .pcMenu.pull-right
-            %ul
-              %li
-                = link_to "BLOG", "#", class: "cool-link #{active_link('')}"
-                
-              %li
-                = link_to "PORTOFOLIO", "#", class: "cool-link #{active_link('')}"
-                
-              %li
-                = link_to "RESUME", home_resume_path , class: "cool-link #{active_link(home_resume_path)}"
-                
-              %li
-                = link_to "CONTACT", "https://philippeaka.typeform.com/to/AV9HXT", class: "cool-link #{active_link('')}"
+
+.headerWp
+  %Header
+    .container
+      .row
+        .col-md-12
+          .navigation-mobile-wrapper
+            %nav.navbar.navbar-custom{:role => "navigation"}
+              .navbar-header
+                %button.navbar-toggle{"data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+                  %span.sr-only Toggle navigation
+                  %span.icon-bar
+                  %span.icon-bar
+                  %span.icon-bar
+                %a.navbar-brand
+                  = image_tag("logo.png", style: 'width: 60px; height: 50px;')
+              #navbarCollapse.collapse.navbar-collapse
+                %ul.nav.navbar-nav
+                  %li
+                    = link_to "Blog", class: 'cool-link'
+                  %li
+                    = link_to "My Apps", class: 'cool-link'
+                  %li
+                    = link_to "About me", class: 'cool-link'
+                  %li
+                    = link_to "Contact", class: 'cool-link'
+                  %li
+                    - if user_signed_in?
+                      = link_to 'Log out', destroy_user_session_path, method: :delete
+          .pcMenuWp
+            .pcMenuLogo.pull-left
+              = link_to "/" do 
+                = image_tag('logo.png', class: 'logoStyles')
+            .pcMenu.pull-right
+              %ul
+                %li
+                  = link_to "BLOG", "#", class: "cool-link #{active_link('')}"
+                  
+                %li
+                  = link_to "PORTOFOLIO", "#", class: "cool-link #{active_link('')}"
+                  
+                %li
+                  = link_to "RESUME", home_resume_path , class: "cool-link #{active_link(home_resume_path)}"
+                  
+                %li
+                  = link_to "CONTACT", "https://philippeaka.typeform.com/to/AV9HXT", class: "cool-link #{active_link('')}"
+          .titlePage
+            - if current_page?(home_resume_path) 
+              %h4.text-center
+                "Everything <span class= 'red-text'> I am</span> not, made me everything <span class='red-text'> I am</span>"
+
+
+
+          
