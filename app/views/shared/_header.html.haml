@@ -54,7 +54,7 @@
                 "Any sufficiently advanced <span>technology</span> is equivalent to magic."
                 %br
                 – Arthur C. Clarke
-      - elsif current_page?(post_path) 
+      - elsif (controller.controller_name == 'posts' && controller.action_name == 'show')
         .row 
           .col-md-8.col-xs-12.col-centered
             .titlePage.text-center
