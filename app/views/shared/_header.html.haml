@@ -46,7 +46,7 @@
                 %li
                   = link_to "CONTACT", "https://philippeaka.typeform.com/to/AV9HXT", class: "cool-link #{active_link('')}"
       
-      - if current_page?(posts_path) 
+      - if (controller.controller_name == 'posts' && controller.action_name == 'index')
         .row 
           .col-md-8.col-xs-12.col-centered
             .titlePage.text-center
