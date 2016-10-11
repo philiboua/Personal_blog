@@ -4,15 +4,16 @@
 .homepageBg{ 
 
   @include full-img-bg('');
-  background-color: #161616;
-  
+  background-color: $foreground;
+  border: 30px solid $background;
+
 
   @include firefox_breakpoint(md_portrait){
-    border: 20px solid #fff;
+    border: 40px solid $background;
   }
 
   @include firefox_breakpoint(md_landscape){
-    border: 20px solid #fff;
+    border: 40px solid $background;
   }
 
 }
@@ -36,6 +37,7 @@
  .menu> ul > li  > a {
     color: #fff;
     font-size: 20px;
+    font-weight: bold;
     &:hover{
       text-decoration: none;
       color: #ea0001;
@@ -54,7 +56,9 @@
 }
 
 .homepageTitle {
-  
+    
+
+    color: $secondary;
     padding-left: 10px;
     font-size: 1.5rem;
     line-height: 1.8rem;
@@ -62,21 +66,21 @@
 
   @include firefox_breakpoint(md_portrait){
     font-size: 3rem;
-    color: #fff;
+    color: $secondary;
     line-height: 3.4rem;
     padding-bottom: 140px;
     padding-left: 50px;
   }
   @include firefox_breakpoint(md_landscape){
     font-size: 3rem;
-    color: #fff;
+    color: $secondary;
     line-height: 3.4rem;
     padding-bottom: 140px;
     padding-left: 50px;
   }
   @include firefox_breakpoint(lg){
     font-size: 3.4rem;
-    color: #fff;
+    color: $secondary;
     line-height: 4.5rem;
     padding-bottom: 140px;
     padding-left: 120px;
@@ -86,7 +90,10 @@
 }
 
 .homepageTitle > span {
-  color: #ea0001;
+  color: $foreground;
+  background: #ea0001;
+  padding-left: 10px;
+  margin-right: 10px;
 }
 
 

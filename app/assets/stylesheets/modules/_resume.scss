@@ -7,13 +7,14 @@
 
 .headerWp{
   height: 300px ;
-  background: #161616;
+  background: $foreground;
   width: 100%;
 }
 
 .logoStyles{
-  width: 140px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
+  margin-top: 20px;
 }
 
 
@@ -44,7 +45,7 @@
 }
 
 .pcMenu > ul > li > a {
-  color: #fff;
+  color: $secondary;
   font-size: 1.2rem;
   &:hover{
     text-decoration: none;

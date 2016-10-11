@@ -91,13 +91,13 @@
 }
 
 .navbar-custom {
-    background-color:#161616;
-    color:#ffffff;
+    background-color:$foreground;
+    color:$secondary;
     border-radius:0;
 }
 
 .navbar-custom .navbar-nav > li > a {
-    color:#fff;
+    color:$secondary;
 }
 
 
@@ -112,13 +112,13 @@ ul.nav a:hover {
 }
 
 .navbar-custom .navbar-toggle {
-    color:#ea0001;
-    background:#161616;
+    color:$secondary;
+    background:$foreground;
 }
 
  .navbar-toggle > .icon-bar {
-    color:#ccc !important;
-    background:#ccc !important;
+    color:$secondary !important;
+    background:$primary !important;
 }
 
 //

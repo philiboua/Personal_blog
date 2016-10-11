@@ -9,6 +9,7 @@
 @import "font-awesome";
 
 // Base
+@import "base/_variables.scss";
 @import "base/_shared.scss";
 @import "base/_mixins.scss";
 @import "base/_normalize.scss";
@@ -21,6 +22,7 @@
 @import "modules/posts.scss";
 @import "modules/_resume.scss";
 @import "modules/apps.scss";
+@import "fakeloader";
 
 
 
