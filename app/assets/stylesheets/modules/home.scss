@@ -4,16 +4,16 @@
 .homepageBg{ 
 
   @include full-img-bg('');
-  background-color: $foreground;
-  border: 30px solid $background;
+  background-color: $background;
+  border: 20px solid white;
 
 
   @include firefox_breakpoint(md_portrait){
-    border: 40px solid $background;
+    border: 20px solid white;
   }
 
   @include firefox_breakpoint(md_landscape){
-    border: 40px solid $background;
+    border: 20px solid white;
   }
 
 }
@@ -53,12 +53,13 @@
   bottom: 0; 
   left: 0;
   width: 100%;
+  background: $background;
 }
 
 .homepageTitle {
     
 
-    color: $secondary;
+    color: white;
     padding-left: 10px;
     font-size: 1.5rem;
     line-height: 1.8rem;
@@ -66,21 +67,21 @@
 
   @include firefox_breakpoint(md_portrait){
     font-size: 3rem;
-    color: $secondary;
+    color: white;
     line-height: 3.4rem;
     padding-bottom: 140px;
     padding-left: 50px;
   }
   @include firefox_breakpoint(md_landscape){
     font-size: 3rem;
-    color: $secondary;
+    color: white;
     line-height: 3.4rem;
     padding-bottom: 140px;
     padding-left: 50px;
   }
   @include firefox_breakpoint(lg){
     font-size: 3.4rem;
-    color: $secondary;
+    color: white;
     line-height: 4.5rem;
     padding-bottom: 140px;
     padding-left: 120px;
@@ -90,8 +91,7 @@
 }
 
 .homepageTitle > span {
-  color: $foreground;
-  background: #ea0001;
+  color: $primary;
   padding-left: 10px;
   margin-right: 10px;
 }

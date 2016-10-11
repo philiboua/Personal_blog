@@ -40,9 +40,9 @@ blockquote {
 
 .title-article-preview > a {
     
-    color: #7a7a7a;
+    color: $background;
     &:hover {
-      color: #74AFAD;
+      color: $primary;
       text-decoration: none;
     }
 }

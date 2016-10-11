@@ -13,15 +13,17 @@
                   %span.icon-bar
                   %span.icon-bar
                 %a.navbar-brand
-                  = image_tag("logo.png", style: 'width: 60px; height: 50px;')
+                  = image_tag("logo.jpg", style: 'width: 60px; height: 50px;')
               #navbarCollapse.collapse.navbar-collapse
                 %ul.nav.navbar-nav
                   %li
-                    = link_to "BLOG", class: 'cool-link'
+                    = link_to "BLOG", class: ''
                   %li
-                    = link_to "PORTOFOLIO", class: 'cool-link'
+                    = link_to "ABOUT", class: ''
                   %li
-                    = link_to "CONTACT", class: 'cool-link'
+                    = link_to "PORTOFOLIO", class: ''
+                  %li
+                    = link_to "CONTACT", class: ''
 
                   %li
                     - if user_signed_in?
@@ -29,27 +31,36 @@
           .pcMenuWp
             .pcMenuLogo.pull-left
               = link_to "/" do 
-                = image_tag('logo.png', class: 'logoStyles')
+                = image_tag('logo.jpg', class: 'logoStyles')
             .pcMenu.pull-right
               %ul
                 %li
-                  = link_to "BLOG", "#", class: "cool-link #{active_link('')}"
+                  = link_to "BLOG", posts_path, class: "cool-link #{active_link('')}"
                   
                 %li
-                  = link_to "RESUME", home_resume_path, class: "cool-link #{active_link('')}"
+                  = link_to "ABOUT", home_resume_path, class: "cool-link #{active_link('')}"
 
                 %li
                   = link_to "PORTOFOLIO", "#", class: "cool-link #{active_link('')}"
                   
                 %li
                   = link_to "CONTACT", "https://philippeaka.typeform.com/to/AV9HXT", class: "cool-link #{active_link('')}"
-          .titlePage
-            - if current_page?(home_resume_path) 
-              .row 
-                .col-md-8.col-xs-12.col-centered
-                  .ProfileWp
-                    .overview
-                    .socialMediaLinks
+      
+      - if current_page?(posts_path) 
+        .row 
+          .col-md-8.col-xs-12.col-centered
+            .titlePage.text-center
+              %h4
+                "Any sufficiently advanced <span>technology</span> is equivalent to magic."
+                %br
+                – Arthur C. Clarke
+      - elsif current_page?(post_path) 
+        .row 
+          .col-md-8.col-xs-12.col-centered
+            .titlePage.text-center
+              %h4
+                = @post.title
+
 
 
 

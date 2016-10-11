@@ -91,18 +91,18 @@
 }
 
 .navbar-custom {
-    background-color:$foreground;
+    background-color:$background;
     color:$secondary;
     border-radius:0;
 }
 
 .navbar-custom .navbar-nav > li > a {
-    color:$secondary;
+    color:white;
 }
 
 
 ul.nav a:hover { 
-  color: #ea0001 !important; 
+  color: $primary !important; 
 
 }
 
@@ -113,7 +113,7 @@ ul.nav a:hover {
 
 .navbar-custom .navbar-toggle {
     color:$secondary;
-    background:$foreground;
+    background:$background;
 }
 
  .navbar-toggle > .icon-bar {
