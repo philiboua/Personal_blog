@@ -36,16 +36,16 @@
               %ul
                 
                 %li
-                  = link_to "ABOUT", "#about", class: "scroll-top"
+                  = link_to "ABOUT", "#about", class: "scroll-top hvr-bob"
                 %li
-                  = link_to "SKILLS", "#skill", class: " scroll-top"
+                  = link_to "SKILLS", "#skill", class: " scroll-top hvr-bob"
                 %li
-                  = link_to "WORK", "#work", class: " scroll-top"
+                  = link_to "WORK", "#work", class: " scroll-top hvr-bob"
                 %li
-                  = link_to "BLOG", posts_path, class: "cool-link #{active_link('')}"
+                  = link_to "BLOG", posts_path, class: "cool-link #{active_link('')} hvr-bob"
                   
                 %li
-                  = link_to "CONTACT", "#contact", class: "cool-link #{active_link('')}"
+                  = link_to "CONTACT", "#contact", class: "cool-link hvr-bob"
 
       
       - if (controller.controller_name == 'posts' && controller.action_name == 'index')

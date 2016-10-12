@@ -241,8 +241,18 @@
 }
 
 .contactLink > a {
-  font-size: 22px;
+  font-size: 16px;
   color: white;
+  @include firefox_breakpoint(md_portrait){
+    font-size: 22px;
+    color: white;
+
+  }
+  @include firefox_breakpoint(md_landscape){
+    font-size: 22px;
+    color: white;
+
+  }
   &:hover{
     color: $primary;
     text-decoration: none;
@@ -264,7 +274,7 @@
 .aboutMeBody{
   color: #fff;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   font-size: 20px;
   line-height: 36px;
 }
