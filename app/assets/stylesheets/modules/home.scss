@@ -204,7 +204,7 @@
   @extend .background-section;
 }
 
-.skills > ul { margin-left: 0px; }
+.skills > ul { padding-left: 0px; }
 
 .skills > ul > li {
   display: inline-block;
@@ -219,8 +219,25 @@
   color: $primary; 
   background: $background;
   padding: 20px;
-  font-size: 60px;
+  font-size: 40px;
   margin-top: 20px;
+
+  @include firefox_breakpoint(md_portrait){
+    color: $primary; 
+    background: $background;
+    padding: 20px;
+    font-size: 60px;
+    margin-top: 20px;
+
+  }
+  @include firefox_breakpoint(md_landscape){
+    color: $primary; 
+    background: $background;
+    padding: 20px;
+    font-size: 60px;
+    margin-top: 20px;
+
+  }
 }
 
 .contactLink > a {
