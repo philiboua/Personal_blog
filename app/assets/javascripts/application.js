@@ -32,3 +32,11 @@ jQuery(document).ready(function($){
 });
 
 
+jQuery(document).ready(function($){
+  setTimeout(function() {
+      $('.myName').show().addClass('animated fadeIn');
+    }, 1500);
+});
+
+  
+
