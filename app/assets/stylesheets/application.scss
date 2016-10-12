@@ -22,9 +22,13 @@
 @import "modules/posts.scss";
 @import "modules/_resume.scss";
 @import "modules/apps.scss";
+@import "modules/_hover.scss";
 @import "fakeloader";
 
-
+// AOS
+@import "aos/animation.scss";
+@import "aos/ease.scss";
+@import "aos/core.scss";
 
 
 

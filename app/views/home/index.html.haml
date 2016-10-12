@@ -12,3 +12,91 @@
             Philippe <span> AKA </span> Full stack developer
             %br/
             Just in case, <span> AKA </span>  is my real last name ;) 
+  
+.aboutMe
+  .container
+    .row 
+      .col-md-10.col-xs-12.col-centered
+        .titleSection
+          %h3
+            Who, Me?
+        .row
+          .col-md-10.col-xs-12.col-centered
+            %p.aboutMeBody
+              Hello there! My name is Philippe <span>AKA</span> I am a full stack developer based in Toronto, Canada. I have gained knowledge and experience writing clean semantic code, responsive web design and developed a strong interest to learn more about UX design. My interest in coding developed as a result of a passion for startups and what we can achieve with technology. 
+
+          
+
+
+.work
+  .container
+    .row 
+      .col-md-10.col-xs-12.col-centered
+        .titleSection
+          %h3
+            Work
+
+.skills
+  .container
+    .row 
+      .col-md-10.col-xs-12.col-centered
+        .titleSection
+          %h3
+            Skills
+        .row
+          .col-md-10.col-xs-12.col-centered
+            .skills
+              %ul
+                %li
+                  %i.devicon-html5-plain-wordmark.mySkills
+                %li
+                  %i.devicon-css3-plain-wordmark.mySkills
+                %li
+                  %i.devicon-bootstrap-plain-wordmark.mySkills
+                %li
+                  %i.devicon-jquery-plain-wordmark.mySkills
+                %li
+                  %i.devicon-javascript-plain.mySkills
+                %li
+                  %i.devicon-sass-original.mySkills
+                %li
+                  %i.devicon-git-plain-wordmark.mySkills
+                %li
+                  %i.devicon-github-plain-wordmark.mySkills
+                %li
+                  %i.devicon-heroku-original-wordmark.mySkills
+
+                %li
+                  %i.devicon-rails-plain-wordmark.mySkills
+                %li
+                  %i.devicon-ruby-plain-wordmark.mySkills
+
+                
+.contact
+  .container
+    .row 
+      .col-md-10.col-xs-12.col-centered
+        .titleSection
+          %h3{"data-aos" => "fade-up"}
+            Contact
+
+        .contactLink.text-center
+          = link_to "https://philippeaka.typeform.com/to/AV9HXT", class: 'hvr-buzz-out' do 
+            %i.fa.fa-envelope.fa-2x.leaveMessage
+            %p Leave me a message ;)
+
+        .singleLine.text-center
+          %hr/
+                  
+                  
+
+:javascript
+
+  require(['aos'], function(AOS){
+      AOS.init({
+          duration: 1200
+      });
+  });
+
+
+          
