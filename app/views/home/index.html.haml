@@ -13,21 +13,21 @@
             %br/
             Just in case, <span> AKA </span>  is my real last name ;) 
   
-.aboutMe
+.aboutMe#about
   .container
     .row 
       .col-md-10.col-xs-11.col-centered
         .titleSection
           %h3
-            Who, Me?
+            About Me
         .row
           .col-md-10.col-xs-12.col-centered
             %p.aboutMeBody
-              Hello there! My name is Philippe <span>AKA</span> I am a full stack developer based in Toronto, Canada. I have gained knowledge and experience writing clean semantic code, responsive web design and developed a strong interest to learn more about UX design. My interest in coding developed as a result of a passion for startups and what we can achieve with technology. 
+              Hello there! My name is Philippe <span>AKA</span>. I am a full stack developer based in Toronto, Canada. I have gained knowledge and experience writing clean semantic code, responsive web design and developed a strong interest to learn more about UX design. My interest in coding developed as a result of a passion for startups and what we can achieve with technology. 
 
           
 
-.skills
+.skills#skill
   .container
     .row 
       .col-md-10.col-xs-11.col-centered
@@ -62,7 +62,7 @@
                 %li
                   %i.devicon-ruby-plain-wordmark.mySkills.box
 
-.work
+.work#work
   .container
     .row 
       .col-md-10.col-xs-11.col-centered
@@ -100,3 +100,13 @@
 
 
 %script{:src => "https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"}
+
+
+:javascript
+  $(document).on('click', '.scroll-top', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1000);
+  });
