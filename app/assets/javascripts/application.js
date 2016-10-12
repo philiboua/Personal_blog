@@ -13,7 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require fakeloader
-//= require aos
+
 //= require jquery_ujs
 //= require_tree .
 
