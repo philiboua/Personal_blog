@@ -27,6 +27,40 @@
 
           
 
+.skills
+  .container
+    .row 
+      .col-md-10.col-xs-12.col-centered
+        .titleSection
+          %h3.test
+            Skills
+        .row
+          .col-md-10.col-xs-12.col-centered
+            .skills
+              %ul
+                %li
+                  %i.devicon-html5-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-css3-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-bootstrap-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-jquery-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-javascript-plain.mySkills.box
+                %li
+                  %i.devicon-sass-original.mySkills.box
+                %li
+                  %i.devicon-git-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-github-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-heroku-original-wordmark.mySkills.box
+
+                %li
+                  %i.devicon-rails-plain-wordmark.mySkills.box
+                %li
+                  %i.devicon-ruby-plain-wordmark.mySkills.box
 
 .work
   .container
@@ -36,42 +70,6 @@
           %h3
             Work
 
-.skills
-  .container
-    .row 
-      .col-md-10.col-xs-12.col-centered
-        .titleSection
-          %h3
-            Skills
-        .row
-          .col-md-10.col-xs-12.col-centered
-            .skills
-              %ul
-                %li
-                  %i.devicon-html5-plain-wordmark.mySkills
-                %li
-                  %i.devicon-css3-plain-wordmark.mySkills
-                %li
-                  %i.devicon-bootstrap-plain-wordmark.mySkills
-                %li
-                  %i.devicon-jquery-plain-wordmark.mySkills
-                %li
-                  %i.devicon-javascript-plain.mySkills
-                %li
-                  %i.devicon-sass-original.mySkills
-                %li
-                  %i.devicon-git-plain-wordmark.mySkills
-                %li
-                  %i.devicon-github-plain-wordmark.mySkills
-                %li
-                  %i.devicon-heroku-original-wordmark.mySkills
-
-                %li
-                  %i.devicon-rails-plain-wordmark.mySkills
-                %li
-                  %i.devicon-ruby-plain-wordmark.mySkills
-
-                
 .contact
   .container
     .row 
@@ -88,15 +86,13 @@
         .singleLine.text-center
           %hr/
                   
-                  
+
 
 :javascript
-
-  require(['aos'], function(AOS){
-      AOS.init({
-          duration: 1200
-      });
-  });
+  window.sr = ScrollReveal();
+  sr.reveal('.test', { duration: 1500 });
+  sr.reveal('.box', { duration: 2000 }, 50);
 
 
-          
+
+%script{:src => "https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"}
