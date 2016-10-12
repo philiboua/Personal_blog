@@ -69,10 +69,59 @@
         .titleSection#work
           %h3
             Work
+
+        .projectWp
+          .row 
+            .col-md-6.col-xs-12.projectImage
+              = image_tag("project-agencevs.png", class: 'resize-image')
+            .col-md-6.col-xs-12.projectOverview
+              %h4
+                AGENCE VS
+              %p.description
+                AGENCE VS is a marketing and business agency. AGENCE VS help their client in Ivory Coast and Canada to improve their value proposition and increase their sales.
+
+              %h5
+                Array of skills used
+
+              .arraySkills
+                %ul
+                  %li
+                    <span>[</span>
+                    %i.devicon-html5-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-css3-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-bootstrap-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-jquery-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-javascript-plain.box.skillUsed,
+                  %li
+                    %i.devicon-sass-original.box.skillUsed,
+                  %li
+                    %i.devicon-git-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-github-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-heroku-original-wordmark.box.skillUsed,
+
+                  %li
+                    %i.devicon-rails-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-ruby-plain-wordmark.box.skillUsed
+                    <span>]</span>
+        .viewWebsite
+          .row 
+            .col-md-12.col-xs-12.col-centered
+              .linkWp.text-center
+                = link_to "VIEW AGENCE VS WEBSITE", "http://www.lagencevs.com/", class: 'hvr-wobble-vertical'
+
+
+
+
+
         .row
-          .col-md-10.col-xs-12.col-centered
-            %p.aboutMeBody
-              Coming soon...
+          .col-md-6.col-xs-12
 
 .contact
   .container
