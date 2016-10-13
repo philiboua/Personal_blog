@@ -65,6 +65,28 @@
     line-height: 1.8rem;
     padding-bottom: 40px;
 
+  @include firefox_breakpoint(xs_landscape){
+    color: white;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding-bottom: 40px;
+  }
+  @include firefox_breakpoint(sm_portrait){
+    color: white;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding-top: 140px;
+  }
+  @include firefox_breakpoint(sm_landscape){
+    color: white;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding-top: 140px;
+  }
+
   @include firefox_breakpoint(md_portrait){
     font-size: 3rem;
     color: white;
@@ -76,7 +98,7 @@
     font-size: 3rem;
     color: white;
     line-height: 3.4rem;
-    padding-bottom: 140px;
+    padding-top: 360px;
     padding-left: 50px;
   }
   @include firefox_breakpoint(lg){
@@ -204,13 +226,12 @@
 }
 
 .skills {
-  padding-top: 60px;
   @extend .background-section;
 }
 
-.skills > ul { padding-left: 0px; }
+.skillsItems > ul { padding-left: 0px; }
 
-.skills > ul > li {
+.skillsItems > ul > li {
   display: inline-block;
   list-style: none;
   overflow: hidden;
@@ -277,10 +298,15 @@
 
 .aboutMeBody{
   color: #fff;
-  padding-top: 100px;
-  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   font-size: 20px;
   line-height: 36px;
+
+  @include firefox_breakpoint(md_portrait){
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 }
 
 .aboutMeBody > span{
@@ -295,12 +321,13 @@
 
 .projectWp{
   margin-top: 80px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .projectOverview{
   color: #fff;
-  text-align: right;
+  text-align: left;
+  
 }
 
 .projectOverview > h4{
@@ -313,6 +340,7 @@
 .projectOverview > h5{
   display: inline-block;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .projectOverview > .description {
@@ -338,6 +366,14 @@
   font-size: 26px;
 }
 
+.skillsItems{
+  padding-top: 60px;
+
+  @include firefox_breakpoint(md_portrait){
+    padding-top: 80px;
+  }
+}
+
 .linkWp > a {
   color: #fff;
   padding: 20px;
@@ -351,4 +387,9 @@
 
 .myName{
   display: none;
+}
+
+#contact{
+  margin-bottom: 40px;
+  margin-top: 60px;
 }

@@ -9,6 +9,17 @@
   min-height: 300px ;
   background: $background;
   width: 100%;
+
+  @include firefox_breakpoint(xs_landscape){
+    min-height: 100px ;
+    background: $background;
+    width: 100%;
+  }
+  @include firefox_breakpoint(sm_landscape){
+    min-height: 100px ;
+    background: $background;
+    width: 100%;
+  }
 }
 
 .logoStyles{
@@ -70,4 +81,9 @@
   color: $primary;
 }
 
+
+.contactLink{
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
 
