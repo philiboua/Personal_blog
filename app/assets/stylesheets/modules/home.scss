@@ -63,14 +63,14 @@
     padding-left: 10px;
     font-size: 1.5rem;
     line-height: 1.8rem;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
 
   @include firefox_breakpoint(xs_landscape){
     color: white;
     padding-left: 10px;
     font-size: 1.5rem;
     line-height: 1.8rem;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
   @include firefox_breakpoint(sm_portrait){
     color: white;
@@ -84,7 +84,7 @@
     padding-left: 10px;
     font-size: 1.5rem;
     line-height: 1.8rem;
-    padding-top: 140px;
+    padding-top: 100px;
   }
 
   @include firefox_breakpoint(md_portrait){
