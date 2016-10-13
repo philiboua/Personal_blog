@@ -55,12 +55,18 @@
                 %li
                   %i.devicon-github-plain-wordmark.mySkills.box
                 %li
+                  %i.devicon-bitbucket-plain-wordmark.mySkills.box
+                %li
                   %i.devicon-heroku-original-wordmark.mySkills.box
 
                 %li
                   %i.devicon-rails-plain-wordmark.mySkills.box
+
                 %li
                   %i.devicon-ruby-plain-wordmark.mySkills.box
+                
+
+
 
 .work
   .container
@@ -115,6 +121,54 @@
             .col-md-12.col-xs-12.col-centered
               .linkWp.text-center
                 = link_to "VIEW AGENCE VS WEBSITE", "http://www.lagencevs.com/", class: 'hvr-wobble-vertical'
+        .projectWp
+          .row 
+            .col-md-6.col-xs-12.projectImage
+              = image_tag("reccrut.png", class: 'resize-image')
+            .col-md-6.col-xs-12.projectOverview
+              %h4
+                RECCRUT
+              %p.description
+                Reccrut is a web application for job seekers and recruiters. 
+                Recruiters can post jobs and filter best candidates through video interviews. 
+                Job seekers can create a short video to pitch themselves and view inside companies through company video profiles. 
+
+
+              %h5
+                Array of skills used
+
+              .arraySkills
+                %ul
+                  %li
+                    <span>[</span>
+                    %i.devicon-html5-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-css3-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-bootstrap-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-jquery-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-javascript-plain.box.skillUsed,
+                  %li
+                    %i.devicon-sass-original.box.skillUsed,
+                  %li
+                    %i.devicon-git-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-github-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-heroku-original-wordmark.box.skillUsed,
+
+                  %li
+                    %i.devicon-rails-plain-wordmark.box.skillUsed,
+                  %li
+                    %i.devicon-ruby-plain-wordmark.box.skillUsed
+                    <span>]</span>
+        .viewWebsite
+          .row 
+            .col-md-12.col-xs-12.col-centered
+              .linkWp.text-center
+                = link_to "VIEW RECCRUT WEBSITE", "http://www.reccrut.com/", class: 'hvr-wobble-vertical'
 
 
 
