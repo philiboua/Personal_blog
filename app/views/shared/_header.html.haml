@@ -17,16 +17,17 @@
               #navbarCollapse.collapse.navbar-collapse
                 %ul.nav.navbar-nav
                   %li
-                    = link_to "BLOG", class: ''
+                    = link_to "ABOUT", "#about", class: "button "
                   %li
-                    = link_to "ABOUT", class: ''
+                    = link_to "SKILLS", "#skill", class: "button "
                   %li
-                    = link_to "PORTOFOLIO", class: ''
+                    = link_to "WORK", "#work", class: "button"
                   %li
-                    = link_to "CONTACT", class: ''
-
+                    = link_to "BLOG", posts_path, class: "button "
                   %li
-                    - if user_signed_in?
+                    = link_to "CONTACT", "#contact", class: "button"
+                  - if user_signed_in?
+                    %li
                       = link_to 'Log out', destroy_user_session_path, method: :delete
           .pcMenuWp
             .pcMenuLogo.pull-left

@@ -215,3 +215,12 @@
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 1000);
   });
+
+  $(document).on('click', '.button', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 1000);
+    $( ".navbar-toggle" ).trigger( "click" )
+  });
