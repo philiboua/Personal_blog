@@ -16,38 +16,46 @@
                   = image_tag("logo.jpg", style: 'width: 60px; height: 50px;')
               #navbarCollapse.collapse.navbar-collapse
                 %ul.nav.navbar-nav
-                  %li
-                    = link_to "ABOUT", "#about", class: "button "
-                  %li
-                    = link_to "SKILLS", "#skill", class: "button "
-                  %li
-                    = link_to "WORK", "#work", class: "button"
-                  %li
-                    = link_to "BLOG", posts_path, class: ""
-                  %li
-                    = link_to "CONTACT", "#contact", class: "button"
-                  - if user_signed_in?
+                  - if current_page?(root_path)
                     %li
-                      = link_to 'Log out', destroy_user_session_path, method: :delete
+                      = link_to "ABOUT", "#about", class: "button "
+                    %li
+                      = link_to "SKILLS", "#skill", class: "button "
+                    %li
+                      = link_to "WORK", "#work", class: "button"
+                    %li
+                      = link_to "BLOG", posts_path, class: ""
+                    %li
+                      = link_to "CONTACT", "#contact", class: "button"
+                    - if user_signed_in?
+                      %li
+                        = link_to 'Log out', destroy_user_session_path, method: :delete
+                  - else 
+                    %li
+                      = link_to "HOME", root_path, class: "button "
+                    
           .pcMenuWp
             .pcMenuLogo.pull-left
               = link_to "/" do 
                 = image_tag('logo.jpg', class: 'logoStyles')
             .pcMenu.pull-right
-              %ul
-                
-                %li
-                  = link_to "ABOUT", "#about", class: "scroll-top hvr-bob"
-                %li
-                  = link_to "SKILLS", "#skill", class: " scroll-top hvr-bob"
-                %li
-                  = link_to "WORK", "#work", class: " scroll-top hvr-bob"
-                %li
-                  = link_to "BLOG", posts_path, class: "cool-link #{active_link('')} hvr-bob"
-                  
-                %li
-                  = link_to "CONTACT", "#contact", class: "cool-link hvr-bob"
-
+              - if current_page?(root_path)
+                %ul
+                  %li
+                    = link_to "ABOUT", "#about", class: "scroll-top hvr-bob"
+                  %li
+                    = link_to "SKILLS", "#skill", class: " scroll-top hvr-bob"
+                  %li
+                    = link_to "WORK", "#work", class: " scroll-top hvr-bob"
+                  %li
+                    = link_to "BLOG", posts_path, class: "cool-link #{active_link('')} hvr-bob"
+                    
+                  %li
+                    = link_to "CONTACT", "#contact", class: "cool-link hvr-bob"
+              - else 
+                %ul
+                  %li
+                    = link_to "HOME", root_path, class: "cool-link hvr-bob"
       
       - if (controller.controller_name == 'posts' && controller.action_name == 'index')
         .row 
