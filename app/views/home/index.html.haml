@@ -1,226 +1,195 @@
-.homepageBg
-  = render 'shared/header'
-  
-  
-
-  .homepageBody
-    .container{style: 'width: 90%'}
-      .row
-        .col-md-12
-
-          %h3.homepageTitle
-            Philippe <span class='emphasis'> AKA </span> Full stack developer
-            
-  
-.aboutMe
-  .container
-    .row 
-      .col-md-10.col-xs-11.col-centered
-        .titleSection#about
-          %h3
-            About Me
-        .row
-          .col-md-10.col-xs-12.col-centered
-            %p.aboutMeBody
-              My name is Philippe <span>AKA.</span> I am a full stack developer based in Toronto, Canada. I have gained knowledge and experience writing clean semantic code, responsive web design and developed a strong interest to learn more about UX design. My interest in coding developed as a result of a passion for startups and what we can achieve with technology. 
-
-          
-
-.skills
-  .container
-    .row 
-      .col-md-10.col-xs-11.col-centered
-        .titleSection#skill
-          %h3.test
-            Skills
-        .row
-          .col-md-10.col-xs-12.col-centered
-            .skillsItems
-              %ul
-                %li
-                  %i.devicon-html5-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-css3-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-bootstrap-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-jquery-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-javascript-plain.mySkills.box
-                %li
-                  %i.devicon-sass-original.mySkills.box
-                %li
-                  %i.devicon-git-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-github-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-bitbucket-plain-wordmark.mySkills.box
-                %li
-                  %i.devicon-heroku-original-wordmark.mySkills.box
-
-                %li
-                  %i.devicon-rails-plain-wordmark.mySkills.box
-
-                %li
-                  %i.devicon-ruby-plain-wordmark.mySkills.box
-                
+%body.body-wp
+  #particles-js.p-wrapper
+    #home.homepage-hero
+      .container-content
+        .flexbox-column
+          .header-wp
+            .social-media
+              %a.link.social-media-icon{:href => "https://www.linkedin.com/in/philippeaka/", :target => "_blank"} 
+              %a.link.social-media-icon{:href => "https://github.com/philiboua/", :target => "_blank"} 
+              %a.behance.link.social-media-icon{:href => "#"} 
+              %a.dribble.link.social-media-icon{:href => "#"} 
+            .menu-wp.w-hidden-main{"data-ix" => "display-menu"}
+              .html-embed.w-embed
+                #menu-button.menu
+                  %span.menu-global.menu-top
+                  %span.menu-global.menu-middle
+                  %span.menu-global.menu-bottom
+            .menu-pc.w-hidden-medium.w-hidden-small.w-hidden-tiny
+              = link_to "ABOUT", "#about", class: " menu-pc-link hvr-bob"
+              = link_to "SKILLS", "#skills", class: " hvr-bob  menu-pc-link"
+              = link_to "WORK", "#work", class: " hvr-bob menu-pc-link"
+              = link_to "BLOG", "https://medium.com/philippeaka",:target => "_blank", class: " hvr-bob menu-pc-link"
+              = link_to "CONTACT", "#contact", class: "scroll-top  hvr-bob menu-pc-link"
+        .homepage-content
+          %h1.title-author-blog
+            PHILIPPE
+            %span.text-span
+              %span AKA
+              %span.function-author WEB DEVELOPER
+          %h1.heading Web developer / Web designer
 
 
 
-.work
-  .container
-    .row 
-      .col-md-10.col-xs-11.col-centered
-        .titleSection#work
-          %h3
-            Work
-
-        .projectWp
-          .row 
-            .col-md-6.col-xs-12.projectImage.box
-              = image_tag("project-agencevs.png", class: 'resize-image')
-            .col-md-6.col-xs-12.projectOverview.box
-              %h4
-                AGENCE VS
-              %p.description
-                AGENCE VS is a marketing and business agency. AGENCE VS help their client in Ivory Coast and Canada to improve their value proposition and increase their sales.
-
-              %h5
-                Array of skills used
-
-              .arraySkills
-                %ul
-                  %li
-                    <span>[</span>
-                    %i.devicon-html5-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-css3-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-bootstrap-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-jquery-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-javascript-plain.box.skillUsed,
-                  %li
-                    %i.devicon-sass-original.box.skillUsed,
-                  %li
-                    %i.devicon-git-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-github-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-heroku-original-wordmark.box.skillUsed,
-
-                  %li
-                    %i.devicon-rails-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-ruby-plain-wordmark.box.skillUsed
-                    <span>]</span>
-        .viewWebsite.box
-          .row 
-            .col-md-12.col-xs-12.col-centered
-              .linkWp.text-center
-                = link_to "VIEW AGENCE VS WEBSITE", "http://www.lagencevs.com/", class: 'hvr-wobble-vertical'
-        .projectWp
-          .row 
-            .col-md-6.col-xs-12.projectImage.box
-              = image_tag("reccrut.png", class: 'resize-image')
-            .col-md-6.col-xs-12.projectOverview.box
-              %h4
-                RECCRUT
-              %p.description
-                Reccrut is a web application for job seekers and recruiters. 
-                Recruiters can post jobs and filter best candidates through video interviews. 
-                Job seekers can create a short video to pitch themselves and view inside companies through company video profiles. 
+  #about.section
+    .container-content
+      .flexbox.flexbox-column
+        %h1.title-section About Me
+        %p.section-text
+          %span.text-span-3> Hello
+          ,
+          %br/
+          %span.text-span-4 My name is Philippe AKA. I am a full stack developer based in Toronto, Canada. I have gained knowledge and experience writing clean semantic code, responsive web design and developed a strong interest to learn more about UX design. My interest in coding developed as a result of a passion for startups and what we can achieve with technology.
 
 
-              %h5
-                Array of skills used
-
-              .arraySkills
-                %ul
-                  %li
-                    <span>[</span>
-                    %i.devicon-html5-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-css3-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-bootstrap-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-jquery-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-javascript-plain.box.skillUsed,
-                  %li
-                    %i.devicon-sass-original.box.skillUsed,
-                  %li
-                    %i.devicon-git-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-github-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-heroku-original-wordmark.box.skillUsed,
-
-                  %li
-                    %i.devicon-rails-plain-wordmark.box.skillUsed,
-                  %li
-                    %i.devicon-ruby-plain-wordmark.box.skillUsed
-                    <span>]</span>
-        .viewWebsite.box
-          .row 
-            .col-md-12.col-xs-12.col-centered
-              .linkWp.text-center
-                = link_to "VIEW RECCRUT WEBSITE", "http://www.reccrut.com/", class: 'hvr-wobble-vertical'
-
-
-
-
-
-        .row
-          .col-md-6.col-xs-12
-
-.contact
-  .container
-    .row 
-      .col-md-10.col-xs-11.col-centered
-        .titleSection#contact
-          %h3
-            Contact
-
-        .contactLink.text-center
-          = link_to "https://philippeaka.typeform.com/to/AV9HXT", class: 'hvr-buzz-out' do 
-            %i.fa.fa-envelope.fa-2x.leaveMessage
-            %p Leave me a message
-
+  #skills.section
+    .container-content
+      .flexbox.flexbox-column
+        %h1.title-section skills
+        .skills-box
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-html5-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-1"}
+            .w-embed
+              %i.devicon-css3-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-bootstrap-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-jquery-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-javascript-plain
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-sass-original
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-git-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-github-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-bitbucket-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-heroku-original-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-ruby-plain-wordmark
+          .skills-item{"data-ix" => "appear-skill-item-2"}
+            .w-embed
+              %i.devicon-rails-plain-wordmark
+  #work.section
+    .container-content
+      .flexbox.flexbox-column
+        %h1.title-section work
+        .mobile-box-project-wp
+          .work-box-mobile
+            = image_tag('placeit.png',  class: 'image-2', style: 'width: 543;')
+            .work-text-mobile
+              %h1.heading-2 Agence VS
+              %p.work-paragraph AGENCE VS is a marketing and business agency. AGENCE VS help their client in Ivory Coast and Canada to improve their value proposition and increase their sales.
+              .work-link-wp
+                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.project-link.w-button{:href => "#"} Project details
+          .work-box-mobile
+            = image_tag('paad-agency.png',  class: 'image-2', style: 'width: 543;')
+            .work-text-mobile
+              %h1.heading-2 Paad
+              %p.work-paragraph Paad is a digital Agency for small businesses. We help small businesses to increase their sales through websites or social media channels.
+              .work-link-wp
+                %a.button-link.w-button{:href => "http://paad.agency/works-masonry.html", :target => "_blank"} Live Website
+                %a.button-link.project-link.w-button{:href => "#"} Project details
+          .work-box-mobile
+            = image_tag('placeit-1.png',  class: 'image-2', style: 'width: 543;')
+            .work-text-mobile
+              %h1.heading-2 Reccrut
+              %p.work-paragraph Reccrut is a web application for startups. Recruiters can post jobs and filter best candidates through video interviews. Job seekers can create a short video to pitch themselves.
+              .work-link-wp
+                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.project-link.w-button{:href => "#"} Project details
+          .work-box-mobile
+            = image_tag('aylie_screenshot_mockup.png',  class: 'image-2', style: 'width: 543;')
+            .work-text-mobile
+              %h1.heading-2 Ayelie
+              %p.work-paragraph Ayelie is a new cosmetic brand for curly hair. The website is still in progress but I am truly amazed by the logo done by my partner Dominique Amangoua.
+              .work-link-wp
+                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.project-link.w-button{:href => "#"} Project details
+          .work-box-mobile
+            = image_tag('Cocoa-Latte--webscreen.png',  class: 'image-2', style: 'width: 543;')
+            .work-text-mobile
+              %h1.heading-2 Cocoa Latte
+              %p.work-paragraph Drogba is the most valuable soccer player in Ivory Coast in my opinion. Like the Nike battleground in France in 2002, I am pretty sure there will be a Drogba Cup soon in Ivory Coast.
+              .work-link-wp
+                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.project-link.w-button{:href => "#"} Project details
+          .work-box-mobile
+            = image_tag('placeit_1.png',  class: 'image-2', style: 'width: 543;')
+            .work-text-mobile
+              %h1.heading-2 Drogba Cup
+              %p.work-paragraph Drogba is the most valuable soccer player in Ivory Coast in my opinion. Like the Nike battleground in France in 2002, I am pretty sure there will be a Drogba Cup soon in Ivory Coast.
+              .work-link-wp
+                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.project-link.w-button{:href => "#"} Project details
+  #contact.section.section-contact
+    .container-content
+      .flexbox.flexbox-column
+        %h1.title-section contact
         
-                  
+
+
+        .contact-form-submit
+          .w-embed
+            %form{:action => "http://formspree.io/contact@paad.agency", :method => "POST"}
+              %article
+                %input#name.border-form{:name => "name", :placeholder => "Your name", :required => "", :size => "50", :type => "text"}/
+              %article
+                %input#email.border-form{:name => "email", :placeholder => "Your email", :required => "", :size => "50", :type => "text"}/
+              %article
+                %textarea#msg.border-form{:cols => "40", :name => "message", :placeholder => "Please write your message", :required => "", :rows => "8", :size => "50"}
+                .btn-wrap.text-left
+                  %button#submit.btn-submit{:name => "submit", :type => "submit"} Submit
+
+            
+
+
+        .footer-social-media
+          .social-media
+            %a.link.social-media-icon{:href => "https://www.linkedin.com/in/philippeaka/", :target => "_blank"} 
+            %a.link.social-media-icon{:href => "https://github.com/philiboua/", :target => "_blank"} 
+            %a.behance.link.social-media-icon{:href => "#"} 
+            %a.dribble.link.social-media-icon{:href => "#"} 
+
+
+
+  .menu-container
+    %a.close-menu.w-inline-block{:href => "#"}
+    %h1.title-menu Pa
+    %a.menu-link{:href => "#about"} about
+    %a.menu-link{:href => "#skills"} SKILLS
+    %a.menu-link{:href => "#work"} WORK
+    %a.blog-link{:href => "https://medium.com/philippeaka", :target => "_blank"} BLOG
+    %a.menu-link{:href => "#contact"} CONTACT
+  .go-up
+
+%script{:src => "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"}
+
+:javascript
+  particlesJS("particles-js", {"particles":{"number":{"value":120,"density":{"enable":true,"value_area":2000}},"color":{"value":"#a3fdf6"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":20,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#a3fdf6","opacity":0,"width":1},"move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":true,"out_mode":"out","bounce":false,"attract":{"enable":true,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
 
 
 :javascript
-  window.sr = ScrollReveal();
-
-  sr.reveal('.titleSection', { origin: 'right', duration: 1000 } );
-  sr.reveal('.aboutMeBody', {  origin: 'right', duration: 1700 });
-  
-  sr.reveal('.test', { duration: 1500 });
-  sr.reveal('.box', { duration: 2000 }, 50);
-
-
-
-%script{:src => "https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"}
-
-
-:javascript
-  $(document).on('click', '.scroll-top', function(event){
+  $(document).on('click', '.menu-link', function(event){
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 1000);
+    $( ".menu-wp" ).trigger( "click" )
   });
 
-  $(document).on('click', '.button', function(event){
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1000);
-    $( ".navbar-toggle" ).trigger( "click" )
-  });
