@@ -1,0 +1,389 @@
+%body
+  .page-container
+    .header-container
+      .container-content
+        .header
+          .adresse-restaurant
+            %h1.address.h6 671 St Clair Ave. West,Toronto
+          .social-media
+            %a.social-media-link.w-inline-block{:href => "https://www.facebook.com/CocoaLatteTo/", :target => "_blank"}
+              %img{:height => "25", :src => "images/facebook-white.png", :width => "25"}/
+            %a.social-media-link.w-inline-block{:href => "https://www.instagram.com/cocoalatteonstclair/", :target => "_blank"}
+              %img{:height => "25", :src => "images/instagram-white.png", :width => "25"}/
+            %a.social-media-link.w-inline-block{:href => "https://twitter.com/cafecocoalatte?lang=en", :target => "_blank"}
+              %img{:height => "25", :src => "images/twitter-copy.png", :width => "25"}/
+          .hours-opening
+            %h1.h6.hours-opening Open Daily: 9am - 6pm
+    .body-container
+      .container-content
+        .homepage-hero
+          %h1.brand-title{"data-ix" => "new-interaction"} CocoaLatte
+          %h1.brand-subtitle.h5{"data-ix" => "brand-titiel"} Breakfast, Lunch, Desserts, Espresso Bar
+        .menu-container
+          .menu
+            %a.link.menu-link{:href => "/#about-us"} ABOUT
+            %a.link.menu-link{:href => "/#menu"} Menu
+            %a.link.menu-link{:href => "/#contact"} Contact
+            %a.link.menu-link{:href => "#"} reservation
+        .gallery-container
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic2.jpg", :srcset => "images/pic2-p-500x500.jpeg 500w, images/pic2-p-800x800.jpeg 800w, images/pic2.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic3.jpg", :srcset => "images/pic3-p-500x500.jpeg 500w, images/pic3-p-800x800.jpeg 800w, images/pic3.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic5.jpg", :srcset => "images/pic5-p-500x500.jpeg 500w, images/pic5-p-800x800.jpeg 800w, images/pic5.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic9.jpg", :srcset => "images/pic9-p-500x500.jpeg 500w, images/pic9-p-800x800.jpeg 800w, images/pic9.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic7.jpg", :srcset => "images/pic7-p-500x500.jpeg 500w, images/pic7-p-800x800.jpeg 800w, images/pic7.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic8.jpg", :srcset => "images/pic8-p-500x500.jpeg 500w, images/pic8-p-800x800.jpeg 800w, images/pic8.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic10.jpg", :srcset => "images/pic10-p-500x500.jpeg 500w, images/pic10-p-800x800.jpeg 800w, images/pic10.jpg 1080w"}/
+          .gallery-item
+            %img.image{:sizes => "(max-width: 479px) 50vw, (max-width: 991px) 250px, 230px", :src => "images/pic11.jpg", :srcset => "images/pic11-p-500x500.jpeg 500w, images/pic11-p-800x800.jpeg 800w, images/pic11.jpg 1080w"}/
+        #about-us.about-us-container
+          %h1.heading
+            Meet
+            %span.text-span CocoaLatte
+          %p.about-us-text
+            We are a family owned and operated café with a passion for food, desserts and coffee. We serve breakfast, lunch and a wide variety of desserts. Our friendly and warm environment is suitable for all occasions, be it a meeting between friends or a family affair!
+            %br/
+            = succeed "The" do
+              %br/
+        #menu.meu-restaurant-container
+          %h1.heading Menu
+          .menu-restaurant-tabs.w-tabs{"data-duration-in" => "300", "data-duration-out" => "100"}
+            .tabs-menu.w-tab-menu
+              %a.tab-link.w--current.w-inline-block.w-tab-link{"data-w-tab" => "Tab 1"}
+                %div Tab 1
+              %a.tab-link-2.w-inline-block.w-tab-link{"data-w-tab" => "Tab 2"}
+                %div Tab 2
+              %a.tab-link-3.w-inline-block.w-tab-link{"data-w-tab" => "Tab 3"}
+                %div Tab 3
+              %a.tab-link-4.w-inline-block.w-tab-link{"data-w-tab" => "Tab 4"}
+                %div Tab 4
+            .w-tab-content
+              .tabs-container.w--tab-active.w-tab-pane{"data-w-tab" => "Tab 1"} kjhkk;lkjl;kjl;kjl;kjl;kjlkjlk;jlk
+              .tabs-container.w-tab-pane{"data-w-tab" => "Tab 2"} l;kjl;kjl;kjl;kjl;kjlk;
+              .tabs-container.w-tab-pane{"data-w-tab" => "Tab 3"} ;lkjlkjl;kjl;kjlklkj
+              .w-tab-pane{"data-w-tab" => "Tab 4"}
+          .tabs.w-tabs{"data-duration-in" => "600", "data-duration-out" => "300"}
+            .tabs-menu-2.w-tab-menu
+              %a.tab-link-5.w-inline-block.w-tab-link{"data-w-tab" => "Tab 1"}
+                .tabs-item-hover.text-block Breakfast
+              %a.tab-link-6.w-inline-block.w-tab-link{"data-w-tab" => "Tab 2"}
+                .tabs-item-hover.text-block-2 Lunch
+              %a.tab-link-7.tabs-item-active.w-inline-block.w-tab-link{"data-w-tab" => "Tab 3"}
+                .tabs-item-hover.text-block-3 Desserts
+              %a.active-tabs-item.tab-link-8.w--current.w-inline-block.w-tab-link{"data-w-tab" => "Tab 4"}
+                .tabs-item-hover.text-block-4 Espresso Bar
+            .w-tab-content
+              .tab-pane.tabs-item.w-tab-pane{"data-w-tab" => "Tab 1"}
+                .tabs-flexbox-container
+                  .tabs-menu-item
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Coffee &amp; Tea
+                      .text-menu-item Coffee (Med and Dark)
+                      .text-menu-item Organic Full Leaf Tea
+                    .container-menu-items
+                      %h1.h5.title-menu-item Specialty Drinks
+                      .text-menu-item Chai Latte
+                      .text-menu-item London Fog
+                      .text-menu-item Flavoured Steamer
+                      .text-menu-item Hot Cocoa
+                      .text-menu-item Peppermint Hot Cocoa
+                      .text-menu-item Organic Apple Cider
+                  .tabs-menu-item.tabs-menu-item-right
+                    .container-menu-items
+                      %h1.h5.title-menu-item Chilled Coffees &amp; Teas
+                      .text-menu-item Americano On Ice
+                      .text-menu-item Latte On Ice
+                      .text-menu-item Cocoa Latte On Ice
+                      .text-menu-item Nutella Latte On Ice
+                      .text-menu-item Chai Latte On Ice (Sweet or Unsweet)
+                      .text-menu-item Organic Iced Teas (Unsweetened)
+                    .container-menu-items
+                      %h1.h5.title-menu-item Frappés by Ghirardelli
+                      .text-menu-item (Creamy chocolate, blended with milk and a shot of espresso)
+                      .text-menu-item Frappé (Plain or Flavoured)
+                    .container-menu-items
+                      %h1.h5.title-menu-item Smoothies, Milkshakes, Lemonades
+                      .text-menu-item Fresh Fruit Smoothies (Dairy Free - No Added Sugar)
+                      .text-menu-item Milkshakes (Made with gelato)
+                      .text-menu-item Lemonade
+              .tabs-item.w-tab-pane{"data-w-tab" => "Tab 2"}
+                .tabs-flexbox-container
+                  .tabs-menu-item
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                  .tabs-menu-item.tabs-menu-item-right
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+              .tab-pane-2.w-tab-pane{"data-w-tab" => "Tab 3"}
+                .tabs-flexbox-container
+                  .tabs-menu-item.tabs-menu-item-right
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                  .tabs-menu-item.tabs-menu-item-right
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+              .w--tab-active.w-tab-pane{"data-w-tab" => "Tab 4"}
+                .tabs-flexbox-container
+                  .tabs-menu-item
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                  .tabs-menu-item.tabs-menu-item-right
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+                    .container-menu-items
+                      %h1.h5.title-menu-item Espresso Bar
+                      .text-menu-item Espresso
+                      .text-menu-item Espresso Macchiatto
+                      .text-menu-item Espresso Americano
+                      .text-menu-item Americano Macchiatto
+                      .text-menu-item Cappuccino
+                      .text-menu-item Latte
+                      .text-menu-item Cocoa Latte
+                      .text-menu-item Nutella Latte
+                      .text-menu-item Flavoured Latte
+        #contact.contact-container
+          %h1.heading Contact
+          #map.map-container
+    .footer
+      .container-content
+        .container-footer
+          .footer-brand
+            %h1.brand-for-footer.brand-title CocoaLatte
+            .social-media.social-media-footer
+              %a.social-media-link.w-inline-block{:href => "https://www.facebook.com/CocoaLatteTo/", :target => "_blank"}
+                %img{:height => "25", :src => "images/facebook-white.png", :width => "25"}/
+              %a.social-media-link.w-inline-block{:href => "https://www.instagram.com/cocoalatteonstclair/", :target => "_blank"}
+                %img{:height => "25", :src => "images/instagram-white.png", :width => "25"}/
+              %a.social-media-link.w-inline-block{:href => "https://twitter.com/cafecocoalatte?lang=en", :target => "_blank"}
+                %img{:height => "25", :src => "images/twitter-copy.png", :width => "25"}/
+  %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", :type => "text/javascript"}
+  %script{:src => "js/webflow.js", :type => "text/javascript"}
+  / [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]
+  :javascript
+    function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 43.6816056, lng: -79.4250588},
+            scrollwheel: false,
+            zoom: 14,
+            styles: [
+        {
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#444444"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#f2f2f2"
+                }
+            ]
+        },
+        {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "saturation": -100
+                },
+                {
+                    "lightness": 45
+                }
+            ]
+        },
+        {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "simplified"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "labels.icon",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "off"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "color": "#edfaee"
+                },
+                {
+                    "visibility": "on"
+                }
+            ]
+        }
+    ]
+          });
+        var image = "https://daks2k3a4ib2z.cloudfront.net/58d9a1b650ea4fa2095961cb/58da98982bebde920b1f2830_google-map-icon.svg";
+        // Define the image to use for the map marker (58 x 44 px)
+                    var image = 'https://daks2k3a4ib2z.cloudfront.net/58d9a1b650ea4fa2095961cb/58da9e0d9c18796e5402cdd8_marker-google-map.png';
+        // Define the Lattitude and Longitude for the map location
+                    var myLatLng = new google.maps.LatLng(43.6816056, -79.4250588);
+        // Define the map marker characteristics
+                    var mapMarker = new google.maps.Marker({
+                    position: myLatLng,
+                    map: map,
+                    icon: image,
+                    title:  'CocoaLatte'
+                    });
+        }
+  %script{:async => "", :defer => "defer", :src => "https://maps.googleapis.com/maps/api/js?key=AIzaSyD9dSNDLog6RP5yNCCEaNaLn1u-oYrr28I&callback=initMap"}
+    :cdata

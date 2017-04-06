@@ -4,6 +4,7 @@
       .container-content
         .flexbox-column
           .header-wp
+
             .social-media
               %a.link.social-media-icon{:href => "https://www.linkedin.com/in/philippeaka/", :target => "_blank"} 
               %a.link.social-media-icon{:href => "https://github.com/philiboua/", :target => "_blank"} 
@@ -21,6 +22,7 @@
               = link_to "WORK", "#work", class: " hvr-bob menu-pc-link"
               = link_to "BLOG", "https://medium.com/philippeaka",:target => "_blank", class: " hvr-bob menu-pc-link"
               = link_to "CONTACT", "#contact", class: "scroll-top  hvr-bob menu-pc-link"
+
         .homepage-content
           %h1.title-author-blog
             PHILIPPE
@@ -46,6 +48,7 @@
     .container-content
       .flexbox.flexbox-column
         %h1.title-section skills
+
         .skills-box
           .skills-item{"data-ix" => "appear-skill-item-2"}
             .w-embed
@@ -83,11 +86,15 @@
           .skills-item{"data-ix" => "appear-skill-item-2"}
             .w-embed
               %i.devicon-rails-plain-wordmark
+
+
   #work.section
     .container-content
       .flexbox.flexbox-column
         %h1.title-section work
+
         .mobile-box-project-wp
+
           .work-box-mobile
             = image_tag('placeit.png',  class: 'image-2', style: 'width: 543;')
             .work-text-mobile
@@ -96,6 +103,7 @@
               .work-link-wp
                 %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
                 %a.button-link.project-link.w-button{:href => "#"} Project details
+
           .work-box-mobile
             = image_tag('paad-agency.png',  class: 'image-2', style: 'width: 543;')
             .work-text-mobile
@@ -104,38 +112,44 @@
               .work-link-wp
                 %a.button-link.w-button{:href => "http://paad.agency/works-masonry.html", :target => "_blank"} Live Website
                 %a.button-link.project-link.w-button{:href => "#"} Project details
+
           .work-box-mobile
             = image_tag('placeit-1.png',  class: 'image-2', style: 'width: 543;')
             .work-text-mobile
               %h1.heading-2 Reccrut
               %p.work-paragraph Reccrut is a web application for startups. Recruiters can post jobs and filter best candidates through video interviews. Job seekers can create a short video to pitch themselves.
               .work-link-wp
-                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.w-button{:href => "https://www.reccrut.com/", :target => "_blank"} Live Website
                 %a.button-link.project-link.w-button{:href => "#"} Project details
+
           .work-box-mobile
             = image_tag('aylie_screenshot_mockup.png',  class: 'image-2', style: 'width: 543;')
             .work-text-mobile
               %h1.heading-2 Ayelie
               %p.work-paragraph Ayelie is a new cosmetic brand for curly hair. The website is still in progress but I am truly amazed by the logo done by my partner Dominique Amangoua.
               .work-link-wp
-                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.w-button{:href => "http://ayelieproject.webflow.io/", :target => "_blank"} Live Website
                 %a.button-link.project-link.w-button{:href => "#"} Project details
+
           .work-box-mobile
             = image_tag('Cocoa-Latte--webscreen.png',  class: 'image-2', style: 'width: 543;')
             .work-text-mobile
               %h1.heading-2 Cocoa Latte
               %p.work-paragraph Drogba is the most valuable soccer player in Ivory Coast in my opinion. Like the Nike battleground in France in 2002, I am pretty sure there will be a Drogba Cup soon in Ivory Coast.
               .work-link-wp
-                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.w-button{:href => "http://template-cocoa-latte.webflow.io/", :target => "_blank"} Live Website
                 %a.button-link.project-link.w-button{:href => "#"} Project details
+
           .work-box-mobile
             = image_tag('placeit_1.png',  class: 'image-2', style: 'width: 543;')
             .work-text-mobile
               %h1.heading-2 Drogba Cup
               %p.work-paragraph Drogba is the most valuable soccer player in Ivory Coast in my opinion. Like the Nike battleground in France in 2002, I am pretty sure there will be a Drogba Cup soon in Ivory Coast.
               .work-link-wp
-                %a.button-link.w-button{:href => "http://www.lagencevs.com/", :target => "_blank"} Live Website
+                %a.button-link.w-button{:href => "http://drogbacup.webflow.io/", :target => "_blank"} Live Website
                 %a.button-link.project-link.w-button{:href => "#"} Project details
+
+
   #contact.section.section-contact
     .container-content
       .flexbox.flexbox-column
@@ -176,8 +190,10 @@
     %a.blog-link{:href => "https://medium.com/philippeaka", :target => "_blank"} BLOG
     %a.menu-link{:href => "#contact"} CONTACT
   .go-up
+  
 
 %script{:src => "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"}
+
 
 :javascript
   particlesJS("particles-js", {"particles":{"number":{"value":120,"density":{"enable":true,"value_area":2000}},"color":{"value":"#a3fdf6"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":20,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#a3fdf6","opacity":0,"width":1},"move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":true,"out_mode":"out","bounce":false,"attract":{"enable":true,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;

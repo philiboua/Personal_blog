@@ -14,9 +14,12 @@ Rails.application.routes.draw do
   get 'posts/manage_posts'
   get 'apps/my_apps'
 
+  get 'websites/cocoa_latte'
+
   
   resources :profiles
   resources :posts
+
   resources :apps, except: [:show]
   
 
